@@ -8,13 +8,22 @@ Structure follows the last build page (`customwheeloffset.com/your-truck-isnt-do
 ## 1. What is in this folder
 
 ```
-index.html      The entire page. All CSS and JS inline. Open it in any browser.
-images/         35 assets. Real logo and real hero photo. Everything else is a labeled placeholder.
-README.md       This file.
+index.html          The markup. Links styles.css and script.js.
+styles.css          All CSS, written mobile-first (base rules are the phone layout,
+                    min-width media queries add the tablet/desktop layout on top).
+script.js           All JS, unchanged in behavior from the original inline version.
+assets/             35 files. Real logo and real hero photo. Everything else is a labeled placeholder.
+index-original.html The previous single-file version (all CSS/JS inline), kept as a fallback.
+README.md           This file.
 ```
 
-No build step, no dependencies. Upload `index.html` and `images/` together.
+No build step, no dependencies. Upload `index.html`, `styles.css`, `script.js`, and `assets/` together.
 Fonts load from the Google Fonts CDN via one `<link>` (Bebas Neue, Oswald, Inter, Rajdhani).
+
+This page used to ship as a single self-contained `index.html` with inline `<style>`/`<script>`
+and an `images/` folder. As of round 13 it is split into three files, and the image folder is
+renamed to `assets/` to match. `index-original.html` is the old all-in-one version, kept working
+(its `<img>` paths were updated to `assets/`) as an easy fallback if anything looks off after the split.
 
 ---
 
@@ -30,7 +39,7 @@ Every product card image is a local placeholder. Swapping in the live photos is 
 change per card. There is a comment marking the spot right above the parts grid:
 
 ```html
-<!-- PRODUCT IMAGES: every .pcard__img <img> below points at a local placeholder in images/.
+<!-- PRODUCT IMAGES: every .pcard__img <img> below points at a local placeholder in assets/.
      To use the live Custom Offsets product photos, replace each src with the product image URL
      from that item's product page. Nothing else needs to change. -->
 ```
@@ -40,7 +49,7 @@ If you paste me the product image URLs I will drop them straight in.
 **I could not download the Affirm and Katapult logos** for the same reason. Both cards have a
 prominent 40px logo slot wired to a file, with a designed placeholder wordmark in it and a
 `TK_LOGO` chip beside it so it cannot ship by accident. Drop the official assets in as
-`images/affirm-logo.svg` and `images/katapult-logo.svg` and they render immediately.
+`assets/affirm-logo.svg` and `assets/katapult-logo.svg` and they render immediately.
 
 Official merchant assets:
 
@@ -55,7 +64,7 @@ Official merchant assets:
 |---|---|
 | Hero copy | **One Weekend. One Driveway. One Build.** Third line in Race Red. |
 | Hero photo | Your driveway shot is in. Re-cropped and re-framed in round 9, see section 15. |
-| Real logo | `images/logo.png` from your white feature logo, trimmed to its bounding box and set to 26px in the nav. |
+| Real logo | `assets/logo.png` from your white feature logo, trimmed to its bounding box and set to 26px in the nav. |
 | Quick shot parts list | Rebuilt as five buckets, brand and product on one line each. See section 4. |
 | Shortcuts | Superseded in round 8, see section 14. |
 | Section names | The Swaps, Buy Now Pay Later, The Tool Checklist, Full Parts List, Watch It Now, The Build Story, FAQ. Matches in both the top nav and the jump band. |
@@ -564,3 +573,51 @@ console     no errors
 em dashes   0
 stale copy  0 remaining strings from the previous revision
 ```
+
+---
+
+## 19. Round 13: split into separate files, CSS rewritten mobile-first
+
+Two structural changes, no copy or layout changes.
+
+**File split.** The page was one self-contained `index.html` with inline `<style>` and `<script>`.
+It is now three files: `index.html` (markup only), `styles.css`, and `script.js`. The JS is an exact,
+unmodified extraction, byte for byte the same logic. `index.html` still loads `styles.css` via one
+`<link>` in the head and `script.js` via one `<script src>` at the end of the body, in the same spot
+the inline block used to sit, so load order and behavior are unchanged. The previous all-in-one file
+is kept as `index-original.html` as a fallback, with its image paths updated to match the folder
+rename below.
+
+**Images folder renamed.** `images/` is now `assets/`. All 35 files moved as-is, nothing inside them
+changed. Every reference across `index.html`, `index-original.html`, and this README was updated to
+match: `<img src>`, the `og:image` meta tag, and the product-image comment above the parts grid.
+
+**CSS rewritten mobile-first.** Every width-based breakpoint in `styles.css` was inverted. The old
+sheet was desktop-first: full desktop rules up top, then close to thirty `@media(max-width:...)`
+blocks knocking things down for smaller screens. The base rules in the new sheet are now the phone
+layout, and `@media(min-width:...)` blocks layer the tablet and desktop layout on top as the viewport
+grows. Breakpoint pixel values did not move, only the direction: a rule that used to read
+`@media(max-width:1080px)` now reads `@media(min-width:1081px)` and describes what to add above that
+width instead of what to remove below it.
+
+Two exceptions, kept as-is on purpose:
+
+- The three `@media(max-height:...)` blocks that keep the hero and the swaps section fitting inside
+  one screen on short laptop windows. Height is a different axis from the mobile-first, device-tier
+  width cascade, so these stay as compressing overrides layered on top of whichever width tier is
+  active, same as before.
+- The two `@media(prefers-reduced-motion:reduce)` blocks, unrelated to screen size entirely.
+
+The trickiest parts were the quick-shot spec bar and the stats row, both of which use `nth-child`
+rules to control borders and padding per grid position at each column count (5/3/1 columns and 4/2
+columns). Getting those right meant writing out the full, explicit rule set for every tier rather
+than relying on partial overrides, specifically because mobile-first media queries are cumulative:
+a `min-width:681px` block stays active at 1400px wide too, so the 1081px-and-up block has to
+explicitly reset anything the 681px tier touched that no longer applies at full desktop width
+(confirmed by hand for every `nth-child` selector involved, since two selectors of equal specificity
+resolve by source order, not by which one is more "current").
+
+Verified: `node --check` on `script.js` passes, and `styles.css` has matching brace and parenthesis
+counts. No visual regression check was possible in this pass since there is no browser tool
+available here — recommend opening `index.html` at a phone width, a tablet width, and a wide desktop
+width before treating this as final.

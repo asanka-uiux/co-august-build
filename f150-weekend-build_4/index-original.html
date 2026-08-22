@@ -1,0 +1,1763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>One Weekend. One Driveway. One Build. | 2018 Ford F-150 | Custom Offsets</title>
+<meta name="description" content="One weekend, one driveway, three wheel and tire packages. We built a 2018 Ford F-150 with Rough Country Vertex 2.5 RR coilovers, AWE 0FG exhaust, aFe intake, and Morimoto XB lighting using nothing but at-home tools.">
+<meta property="og:title" content="One Weekend. One Driveway. One Build. | 2018 F-150">
+<meta property="og:description" content="No shop. No lift. No welding. Just a driveway, a weekend, and three wheel and tire packages on one F-150.">
+<meta property="og:image" content="assets/og-share.jpg">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   CUSTOM OFFSETS . ONE WEEKEND. ONE DRIVEWAY. ONE BUILD.
+   2018 F-150 . Race Red standard on near black
+   Type: Bebas Neue / Oswald / Inter / Rajdhani
+   Single file. All CSS and JS inline.
+   ============================================================ */
+:root{
+  --red:#CE1126; --red-hot:#FF2036; --red-deep:#8E0B19;
+  --ink:#0A0A0B; --panel:#111114; --panel-2:#17171C; --panel-3:#1E1E24;
+  --line:rgba(255,255,255,.10); --line-2:rgba(255,255,255,.06);
+  --white:#FFF; --text:#E7E7EA; --muted:#9A9AA4; --dim:#6E6E78; --green:#5FD08A;
+  --maxw:1240px; --wide:1520px; --r:4px; --navh:66px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--navh) + 16px)}
+body{background:var(--ink);color:var(--text);font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+.sec{padding:96px 0;position:relative}
+.sec--swaps{padding:28px 0 34px}
+
+/* type */
+.display{font-family:'Bebas Neue',Impact,sans-serif;font-weight:400;line-height:.87;letter-spacing:.012em;text-transform:uppercase;color:var(--white)}
+h1.display{font-size:clamp(2.4rem,5.6vw,5rem)}
+h2.display{font-size:clamp(2.1rem,4.4vw,3.6rem)}
+.kicker{font-family:'Oswald',sans-serif;font-weight:600;font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;color:var(--red-hot);display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.kicker::before{content:"";width:32px;height:2px;background:var(--red);flex:none}
+.kicker--c{justify-content:center}
+.kicker--p::before{display:none}
+.lede{font-size:clamp(1.02rem,1.5vw,1.18rem);color:var(--muted);max-width:68ch}
+.num{font-family:'Rajdhani',sans-serif;font-weight:700;font-variant-numeric:tabular-nums}
+.label{font-family:'Oswald',sans-serif;font-weight:500;font-size:.67rem;letter-spacing:.2em;text-transform:uppercase;color:var(--dim)}
+.red{color:var(--red-hot)}
+.tk{font-family:'Rajdhani',sans-serif;font-weight:700;background:rgba(206,17,38,.16);color:#FF6B76;border:1px dashed rgba(255,32,54,.5);padding:0 7px;border-radius:3px;font-size:.86em;letter-spacing:.04em;white-space:nowrap;display:inline-block}
+
+/* buttons */
+.btn{font-family:'Oswald',sans-serif;font-weight:600;font-size:.78rem;letter-spacing:.15em;text-transform:uppercase;padding:15px 28px;border-radius:var(--r);text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:10px;transition:all .2s}
+.btn--primary{background:var(--red);color:#fff}
+.btn--primary:hover{background:var(--red-hot);transform:translateY(-2px);box-shadow:0 10px 28px rgba(206,17,38,.3)}
+.btn--ghost{border:1px solid var(--line);color:var(--text)}
+.btn--ghost:hover{border-color:var(--red);color:#fff;background:rgba(206,17,38,.1)}
+.btn--wide{width:100%}
+
+/* ---------- nav ---------- */
+.nav{position:fixed;top:0;left:0;right:0;z-index:95;height:var(--navh);background:rgba(10,10,11,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line-2)}
+.nav__in{max-width:var(--maxw);margin:0 auto;padding:0 28px;height:100%;display:flex;align-items:center;gap:24px}
+.brand{display:flex;align-items:center;flex:none}
+.brand img{height:26px;width:auto}
+.nav__links{display:flex;gap:20px;margin-left:auto}
+.nav__links a{font-family:'Oswald',sans-serif;font-size:.69rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s;white-space:nowrap}
+.nav__links a:hover,.nav__links a.on{color:var(--white)}
+.nav__cta{font-family:'Oswald',sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;background:var(--red);color:#fff;text-decoration:none;padding:11px 19px;border-radius:var(--r);white-space:nowrap;transition:background .2s}
+.nav__cta:hover{background:var(--red-hot)}
+.progress{position:absolute;left:0;bottom:-1px;height:2px;background:var(--red-hot);width:0}
+@media(max-width:1040px){.nav__links{display:none}.nav__cta{margin-left:auto}}
+@media(max-width:520px){.brand img{height:22px}}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:min(calc(100svh - var(--navh)),760px);display:flex;align-items:flex-end;overflow:hidden;margin-top:var(--navh)}
+.hero__bg{position:absolute;inset:0;z-index:0}
+.hero__bg img{width:100%;height:100%;object-fit:cover;object-position:center 66%}
+.hero__bg::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,var(--ink) 3%,rgba(10,10,11,.78) 34%,rgba(10,10,11,.28) 72%,rgba(10,10,11,.42) 100%),linear-gradient(to right,rgba(10,10,11,.82),rgba(10,10,11,.06) 58%)}
+.hero__in{position:relative;z-index:2;width:100%;padding:52px 0 40px}
+.stamp{font-family:'Oswald',sans-serif;font-size:.64rem;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--text);margin-bottom:16px;text-shadow:0 1px 12px rgba(0,0,0,.7)}
+.stamp b{color:var(--red-hot);font-weight:600}
+h1.display{text-shadow:0 3px 28px rgba(0,0,0,.55)}
+h1.display .l2{display:block;color:var(--red-hot)}
+.hero__sub{margin-top:18px;max-width:58ch;font-size:.97rem;color:#C9C9D1;text-shadow:0 1px 14px rgba(0,0,0,.8)}
+.hero__actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+@media(max-height:760px){
+  .hero__in{padding:40px 0 30px}
+  .hero__sub{font-size:.9rem;margin-top:14px}
+  .hero__actions{margin-top:18px}
+  .btn{padding:13px 24px}
+}
+
+/* ---------- quick shot spec bar ---------- */
+.keyspecs{background:var(--panel);border-top:1px solid var(--line-2);border-bottom:1px solid var(--line-2)}
+.keyspecs__in{max-width:var(--wide);margin:0 auto;padding:0 34px;display:grid;grid-template-columns:repeat(5,1fr)}
+.ks{padding:24px 20px 24px 0;border-right:1px solid var(--line-2);min-width:0}
+.ks:last-child{border-right:0}
+.ks:not(:first-child){padding-left:20px}
+.ks__l{font-family:'Oswald',sans-serif;font-weight:500;font-size:.61rem;letter-spacing:.19em;text-transform:uppercase;color:var(--dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ks__a{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.02rem,1.34vw,1.34rem);color:var(--white);letter-spacing:.028em;line-height:1.18;margin-top:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ks__b{font-family:'Rajdhani',sans-serif;font-weight:600;font-size:clamp(.76rem,.9vw,.88rem);color:var(--muted);margin-top:3px;letter-spacing:.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ks--brands .ks__a,.ks--brands .ks__b{white-space:normal;overflow:visible}
+@media(max-width:1080px){
+  .keyspecs__in{grid-template-columns:repeat(3,1fr)}
+  .ks{padding:18px 16px 18px 0!important;border-bottom:1px solid var(--line-2)}
+  .ks:nth-child(3n){border-right:0}
+  .ks:nth-child(n+4){padding-left:0!important}
+  .ks:nth-child(4),.ks:nth-child(5){border-bottom:0}
+  .ks:nth-child(5){padding-left:16px!important}
+}
+@media(max-width:680px){
+  .keyspecs__in{grid-template-columns:1fr}
+  .ks{padding:15px 0!important;border-right:0!important;border-bottom:1px solid var(--line-2)!important}
+  .ks:last-child{border-bottom:0!important}
+}
+
+/* ---------- jump band ---------- */
+.jump{background:var(--ink);border-bottom:1px solid var(--line-2)}
+.jump__in{max-width:var(--wide);margin:0 auto;padding:22px 34px;display:flex;flex-wrap:wrap;gap:10px 20px;align-items:baseline;justify-content:space-between}
+.jump__in a{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.12rem,1.62vw,1.5rem);letter-spacing:.055em;color:var(--dim);text-decoration:none;transition:color .2s;line-height:1.2;white-space:nowrap}
+.jump__in a:hover,.jump__in a.on{color:var(--white)}
+@media(max-width:900px){.jump__in{justify-content:flex-start;gap:8px 22px}}
+
+/* ============================================================
+   THE SWAPS . one section, two modes
+   ============================================================ */
+.swaps{background:var(--panel);position:relative;overflow:hidden}
+.swaps::before{content:"";position:absolute;top:0;left:0;right:0;height:340px;background:radial-gradient(1000px 340px at 22% 0%,rgba(206,17,38,.13),transparent 70%);pointer-events:none}
+.modes{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:4px;position:relative}
+@media(max-width:900px){.modes{grid-template-columns:1fr}}
+.mode{position:relative;text-align:left;border:1px solid var(--line);border-radius:var(--r);background:var(--panel-2);padding:20px 22px 18px;overflow:hidden;transition:opacity .3s,border-color .3s,background .3s,transform .25s}
+.mode::before{content:"";position:absolute;left:0;top:0;right:0;height:3px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .38s cubic-bezier(.2,.7,.3,1)}
+.mode[aria-selected="false"]{opacity:.42;background:var(--panel)}
+.mode[aria-selected="false"]:hover{opacity:.72;border-color:rgba(206,17,38,.4);transform:translateY(-2px)}
+.mode[aria-selected="true"]::before{transform:scaleX(1)}
+.mode:focus-visible{outline:2px solid var(--red-hot);outline-offset:2px}
+.mode__k{font-family:'Oswald',sans-serif;font-weight:600;font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--red-hot);display:block}
+.mode__t{display:block;font-family:'Bebas Neue',sans-serif;font-size:clamp(1.55rem,2.3vw,2rem);color:var(--white);line-height:1;letter-spacing:.03em;text-transform:uppercase;margin:7px 0 8px}
+.mode__p{display:block;font-size:.88rem;color:var(--muted);line-height:1.5;max-width:52ch}
+.mode__go{display:inline-flex;align-items:center;gap:9px;margin-top:12px;font-family:'Oswald',sans-serif;font-weight:600;font-size:.62rem;letter-spacing:.17em;text-transform:uppercase;color:var(--dim)}
+.mode__go::before{content:"";width:9px;height:9px;border-radius:50%;border:1.5px solid var(--dim);flex:none;transition:background .2s,border-color .2s,box-shadow .2s}
+.mode[aria-selected="true"] .mode__go{color:var(--white)}
+.mode[aria-selected="true"] .mode__go::before{background:var(--red-hot);border-color:var(--red-hot);box-shadow:0 0 10px rgba(255,32,54,.8)}
+
+.swapbox{margin-top:18px}
+.swapbox[hidden]{display:none}
+.picker{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:var(--r) var(--r) 0 0;overflow:hidden;background:var(--panel-2)}
+.pick{position:relative;padding:14px 18px 13px;text-align:left;border-right:1px solid var(--line);transition:background .25s;overflow:hidden}
+.pick:last-child{border-right:0}
+.pick::after{content:"";position:absolute;left:0;bottom:0;height:3px;width:100%;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .35s cubic-bezier(.2,.7,.3,1)}
+.pick[aria-selected="true"]{background:var(--panel-3)}
+.pick[aria-selected="true"]::after{transform:scaleX(1)}
+.pick:hover{background:var(--panel-3)}
+.pick:focus-visible{outline:2px solid var(--red-hot);outline-offset:-2px}
+.pick__n{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:.76rem;color:var(--dim);letter-spacing:.14em;display:block}
+.pick[aria-selected="true"] .pick__n{color:var(--red-hot)}
+.pick__name{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.4rem,2.4vw,1.85rem);color:var(--white);line-height:1;margin:4px 0 3px;letter-spacing:.03em;display:block}
+.pick__size{font-family:'Rajdhani',sans-serif;font-weight:600;font-size:.86rem;color:var(--muted);letter-spacing:.05em;display:block}
+@media(max-width:700px){.picker{grid-template-columns:1fr}.pick{border-right:0;border-bottom:1px solid var(--line);padding:14px 16px}.pick:last-child{border-bottom:0}}
+/* both stages share one height so the wheel and suspension panels match */
+.stage{display:grid;grid-template-columns:1.28fr .92fr;border:1px solid var(--line);border-top:0;background:var(--panel-2);min-height:498px}
+@media(max-width:1000px){.stage{grid-template-columns:1fr;min-height:0}}
+.stage__vis{position:relative;overflow:hidden;background:#000}
+.stage__vis img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.06);transition:opacity .55s ease,transform 1.1s cubic-bezier(.2,.7,.3,1)}
+.stage__vis img.on{opacity:1;transform:scale(1)}
+.stage__badge{position:absolute;top:18px;left:18px;z-index:3;font-family:'Oswald',sans-serif;font-size:.62rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;background:var(--red);color:#fff;padding:7px 13px;border-radius:var(--r)}
+@media(max-width:1000px){.stage__vis{min-height:320px}}
+@media(max-width:420px){.stage__vis{min-height:240px}}
+.stage__data{padding:22px 24px 24px;display:flex;flex-direction:column}
+/* panel type hierarchy: setup name biggest, then product plus size, then the featured line */
+.stage__eyebrow{font-family:'Oswald',sans-serif;font-weight:600;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--red-hot)}
+.stage__name{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,3.1vw,2.75rem);color:var(--white);line-height:.94;letter-spacing:.02em;text-transform:uppercase;margin-top:5px}
+.stage__prod{font-family:'Oswald',sans-serif;font-weight:500;font-size:.95rem;color:var(--text);margin-top:9px;line-height:1.3}
+.stage__prod em{font-style:normal;font-family:'Rajdhani',sans-serif;font-weight:700;color:var(--muted);letter-spacing:.03em}
+.stage__feature{
+  display:flex;align-items:baseline;gap:9px;margin-top:9px;padding:8px 12px;
+  background:rgba(206,17,38,.12);border-left:2px solid var(--red);border-radius:0 var(--r) var(--r) 0;
+}
+.stage__feature .k{font-family:'Oswald',sans-serif;font-weight:600;font-size:.56rem;letter-spacing:.17em;text-transform:uppercase;color:#FF8A92;flex:none}
+.stage__feature .v{font-family:'Oswald',sans-serif;font-weight:600;font-size:1rem;color:#fff;line-height:1.25}
+.stage__blurb{margin-top:11px;font-size:.89rem;color:var(--muted);line-height:1.55}
+
+/* driveway reality, now overlaid in the corner of the photo */
+.stage__over{
+  position:absolute;left:0;bottom:0;z-index:3;max-width:78%;
+  padding:13px 16px 14px;background:rgba(10,10,11,.86);backdrop-filter:blur(9px);
+  border-top:1px solid var(--line);border-right:1px solid var(--line);
+  border-left:2px solid var(--red);font-size:.83rem;line-height:1.5;color:var(--text);
+}
+.stage__over b{font-family:'Oswald',sans-serif;font-weight:600;font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--red-hot);display:block;margin-bottom:4px}
+@media(max-width:1000px){.stage__over{max-width:100%;right:0;border-right:0}}
+@media(max-width:520px){.stage__over{font-size:.78rem;padding:11px 14px}}
+/* compact spec chips + one line detail */
+.chips{display:grid;grid-template-columns:repeat(3,1fr);margin-top:14px;border-top:1px solid var(--line-2);border-bottom:1px solid var(--line-2)}
+.chip{padding:9px 12px;border-right:1px solid var(--line-2);min-width:0}
+.chip:first-child{padding-left:0}
+.chip:last-child{border-right:0;padding-right:0}
+.chip__k{font-family:'Oswald',sans-serif;font-weight:500;font-size:.57rem;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.chip__v{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:1.02rem;color:var(--white);margin-top:3px;letter-spacing:.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* horizontal offset ruler (wheels) */
+.ruler{margin-top:20px}
+.ruler__top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:7px}
+.ruler__val{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:1.22rem;color:var(--red-hot)}
+.ruler__track{position:relative;height:26px;border:1px solid var(--line);border-radius:var(--r);background:var(--panel-3);overflow:hidden}
+.ruler__ticks{position:absolute;inset:0;display:flex}
+.ruler__ticks i{flex:1;border-right:1px solid rgba(255,255,255,.05)}
+.ruler__zero{position:absolute;top:0;bottom:0;width:1px;background:rgba(255,255,255,.28)}
+.ruler__pin{position:absolute;top:3px;bottom:3px;width:5px;background:var(--red-hot);border-radius:2px;transition:left .5s cubic-bezier(.2,.7,.3,1);box-shadow:0 0 14px rgba(255,32,54,.75)}
+.ruler__ends{display:flex;justify-content:space-between;margin-top:6px}
+.helper{margin-top:10px;font-size:.79rem;color:var(--dim);line-height:1.5}
+
+/* vertical lift gauge (suspension) */
+.liftrow{margin-top:16px;display:grid;grid-template-columns:94px 1fr;gap:20px;align-items:start}
+@media(max-width:420px){.liftrow{grid-template-columns:84px 1fr;gap:14px}}
+.lift{display:flex;flex-direction:column}
+.lift__l{margin-bottom:6px}
+.lift__wrap{position:relative;height:112px;display:flex;gap:8px}
+.lift__scale{position:relative;width:30px;flex:none}
+.lift__scale span{position:absolute;right:0;transform:translateY(50%);font-family:'Rajdhani',sans-serif;font-weight:700;font-size:.7rem;color:var(--dim);letter-spacing:.02em}
+.lift__tube{position:relative;flex:1;border:1px solid var(--line);border-radius:var(--r);background:var(--panel-3);overflow:hidden}
+.lift__grid{position:absolute;inset:0}
+.lift__grid i{position:absolute;left:0;right:0;height:1px;background:rgba(255,255,255,.055)}
+.lift__fill{position:absolute;left:0;right:0;bottom:0;height:0;background:linear-gradient(to top,var(--red-deep),var(--red-hot));transition:height .6s cubic-bezier(.2,.7,.3,1)}
+.lift__mark{position:absolute;left:-3px;right:-3px;height:2px;background:#fff;box-shadow:0 0 12px rgba(255,255,255,.6);bottom:0;transition:bottom .6s cubic-bezier(.2,.7,.3,1)}
+.lift__chip{position:absolute;left:50%;transform:translate(-50%,50%);bottom:0;font-family:'Rajdhani',sans-serif;font-weight:700;font-size:.9rem;color:#fff;background:var(--red);border-radius:99px;padding:3px 11px;white-space:nowrap;transition:bottom .6s cubic-bezier(.2,.7,.3,1);z-index:2}
+.lift__base{margin-top:8px;text-align:center}
+
+/* meters */
+.meters__h{margin-top:20px;display:flex;align-items:center;gap:10px}
+.meters__h i{flex:1;height:1px;background:var(--line-2)}
+.meters{margin-top:10px;display:grid;gap:8px}
+@media(min-width:1001px){
+  .stage__data > .meters{grid-template-columns:repeat(3,1fr);gap:16px}
+}
+.meter__top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:3px}
+.meter__v{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:.78rem;color:var(--muted)}
+.meter__bar{height:4px;background:var(--panel-3);border-radius:99px;overflow:hidden}
+.meter__fill{height:100%;background:linear-gradient(90deg,var(--red-deep),var(--red-hot));width:0;border-radius:99px;transition:width .65s cubic-bezier(.2,.7,.3,1)}
+.stage__foot{margin-top:auto;padding-top:16px;display:flex;align-items:baseline;justify-content:space-between;gap:16px}
+.stage__foot .k{font-family:'Oswald',sans-serif;font-weight:500;font-size:.6rem;letter-spacing:.17em;text-transform:uppercase;color:var(--dim)}
+.stage__foot .v{font-family:'Bebas Neue',sans-serif;font-size:1.7rem;color:var(--white);letter-spacing:.02em;line-height:1}
+.stage__cta{margin-top:12px}
+
+/* ============================================================
+   VIEWPORT-HEIGHT FIT
+   The swaps section is built to land inside one screen. These two
+   tiers tighten it on the laptop heights people actually use.
+   ============================================================ */
+@media(max-height:960px){
+  .sec--swaps{padding:22px 0 26px}
+  .mode{padding:16px 20px 15px}
+  .mode__t{font-size:clamp(1.45rem,2.1vw,1.8rem);margin:6px 0 6px}
+  .mode__p{font-size:.84rem;line-height:1.45}
+  .mode__go{margin-top:10px}
+  .pick{padding:11px 16px 10px}
+  .pick__name{font-size:clamp(1.3rem,2.1vw,1.6rem)}
+  .stage{min-height:0}
+  .stage__data{padding:18px 20px 20px}
+  .stage__name{font-size:clamp(1.75rem,2.7vw,2.3rem)}
+  .stage__prod{margin-top:7px;font-size:.9rem}
+  .stage__feature{margin-top:7px;padding:7px 11px}
+  .stage__feature .v{font-size:.94rem}
+  .stage__blurb{margin-top:8px;font-size:.84rem;line-height:1.48;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .chips{margin-top:11px}
+  .chip{padding:7px 11px}
+  .ruler{margin-top:14px}
+  .meters__h{display:none}
+  .meters{margin-top:14px}
+  .stage__foot{padding-top:12px}
+  .stage__cta{margin-top:9px}
+  .stage__cta .btn{padding:12px 20px}
+  .lift__wrap{height:84px}
+  .stage__over{padding:11px 14px 12px;font-size:.8rem}
+}
+@media(max-height:880px){
+  .sec--swaps{padding:16px 0 20px}
+  .modes{gap:12px}
+  .mode{padding:13px 16px 12px}
+  .mode__p{display:none}
+  .mode__go{margin-top:8px}
+  .swapbox{margin-top:12px}
+  .stage__data{padding:15px 18px 16px}
+  .stage__name{font-size:clamp(1.6rem,2.4vw,2rem)}
+  .stage__prod{margin-top:6px;font-size:.87rem}
+  .stage__feature{margin-top:6px;padding:6px 10px}
+  .lift__wrap{height:84px}
+}
+@media(max-height:790px){
+  .sec--swaps{padding:10px 0 14px}
+  .modes{gap:10px}
+  .mode{padding:11px 14px 10px}
+  .pick{padding:9px 14px 8px}
+  .stage__data{padding:13px 16px 14px}
+  .chips{margin-top:9px}
+  .chip{padding:6px 10px}
+  .ruler{margin-top:11px}
+  .meters{margin-top:11px}
+  .stage__foot{padding-top:9px}
+  .stage__cta .btn{padding:11px 18px}
+  .stage__eyebrow{font-size:.58rem}
+  .stage__name{font-size:1.62rem}
+  .stage__prod{margin-top:5px;font-size:.84rem}
+  .stage__feature{margin-top:5px;padding:5px 9px}
+  .stage__feature .v{font-size:.9rem}
+  .lift__wrap{height:72px}
+  .stage__over{padding:9px 13px 10px;font-size:.77rem}
+}
+
+/* ---------- driveway ready + financing ---------- */
+.bnpl{background:var(--ink);border-top:1px solid var(--line-2)}
+.showcase{margin-top:32px}
+.showcase__main{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:#000}
+.showcase__main img{width:100%;aspect-ratio:16/9;object-fit:cover}
+
+/* financing banner, merged into the win section */
+.finbanner{
+  margin-top:32px;border-radius:10px;padding:44px 40px 38px;text-align:center;position:relative;overflow:hidden;
+  background:linear-gradient(165deg,#8E0B19,#6E0812 58%,#590610);
+  border:1px solid rgba(255,255,255,.11);
+  animation:finglow 3.4s ease-in-out infinite;
+}
+@keyframes finglow{
+  0%,100%{box-shadow:0 0 0 0 rgba(206,17,38,.40),0 14px 44px rgba(0,0,0,.45)}
+  50%{box-shadow:0 0 46px 9px rgba(255,32,54,.34),0 14px 44px rgba(0,0,0,.45)}
+}
+.finbanner::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(620px 210px at 50% 0%,rgba(255,255,255,.09),transparent 70%)}
+.finbanner > *{position:relative;z-index:2}
+.finbanner__k{font-family:'Oswald',sans-serif;font-weight:600;font-size:.66rem;letter-spacing:.28em;text-transform:uppercase;color:#FFC8CD}
+.finbanner__t{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.9rem,3.9vw,3rem);color:#fff;letter-spacing:.02em;line-height:1;margin:14px 0 12px}
+.finbanner__p{font-size:.97rem;color:#F1D2D6;max-width:62ch;margin:0 auto 26px}
+.finbanner__btn{font-family:'Oswald',sans-serif;font-weight:600;font-size:clamp(.72rem,1.02vw,.85rem);letter-spacing:.13em;text-transform:uppercase;background:#fff;color:#0A0A0B;border-radius:6px;padding:17px 34px;display:inline-flex;align-items:center;gap:10px;transition:transform .2s,box-shadow .2s,background .2s}
+.finbanner__btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(0,0,0,.42);background:#F4F4F6}
+.finbanner__lenders{display:flex;align-items:center;justify-content:center;gap:20px;margin-top:24px;opacity:.85}
+.finbanner__lenders img{height:22px;width:auto}
+.finbanner__lenders span{font-family:'Oswald',sans-serif;font-size:.58rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#EEBEC3}
+@media(max-width:600px){.finbanner{padding:32px 22px 30px}.finbanner__lenders{flex-wrap:wrap;gap:14px}}
+@media(prefers-reduced-motion:reduce){.finbanner{animation:none;box-shadow:0 0 30px 4px rgba(255,32,54,.22),0 14px 44px rgba(0,0,0,.45)}}
+
+/* financing modal */
+.modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;padding:24px}
+.modal.on{display:flex}
+.modal__scrim{position:absolute;inset:0;background:rgba(4,4,5,.82);backdrop-filter:blur(6px)}
+.modal__panel{position:relative;z-index:2;width:100%;max-width:940px;max-height:88vh;overflow-y:auto;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:38px 38px 32px;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+.modal__x{position:absolute;top:14px;right:14px;width:38px;height:38px;border:1px solid var(--line);border-radius:50%;color:var(--muted);font-size:1.15rem;line-height:1;transition:all .2s}
+.modal__x:hover{color:#fff;border-color:var(--red);background:rgba(206,17,38,.14)}
+.modal__k{font-family:'Oswald',sans-serif;font-weight:600;font-size:.64rem;letter-spacing:.24em;text-transform:uppercase;color:var(--red-hot)}
+.modal__t{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.9rem,3.3vw,2.6rem);color:var(--white);letter-spacing:.02em;line-height:1;margin:12px 0 10px}
+.modal__p{font-size:.94rem;color:var(--muted);max-width:70ch}
+.fin{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:26px}
+@media(max-width:760px){.fin{grid-template-columns:1fr}.modal__panel{padding:30px 22px 26px}}
+.fincard{border:1px solid var(--line);border-radius:var(--r);background:var(--panel-2);padding:26px;display:flex;flex-direction:column}
+.fincard__logo{height:36px;display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.fincard__logo img{height:100%;width:auto}
+.fincard h4{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;color:var(--white);letter-spacing:.03em;margin:0 0 10px;line-height:1.02}
+.fincard p{font-size:.89rem;color:var(--muted);margin-bottom:20px;flex:1}
+.pill{display:inline-block;font-family:'Oswald',sans-serif;font-size:.6rem;font-weight:600;letter-spacing:.17em;text-transform:uppercase;background:rgba(206,17,38,.16);color:#FF6B76;padding:5px 11px;border-radius:99px;margin-bottom:12px}
+.finnote{margin-top:20px;font-size:.78rem;color:var(--dim)}
+
+/* ---------- tool checklist ---------- */
+.tools{background:var(--panel);border-top:1px solid var(--line-2);border-bottom:1px solid var(--line-2)}
+.clip{margin-top:40px;border:1px solid var(--line);border-radius:var(--r);background:var(--panel-2);overflow:hidden}
+.clip__top{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;padding:22px 26px;border-bottom:1px solid var(--line);background:var(--panel-3)}
+.clip__ttl{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;color:var(--white);letter-spacing:.05em;line-height:1}
+.clip__meta{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.clip__count{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:1rem;color:var(--white);white-space:nowrap}
+.clip__count span{color:var(--red-hot)}
+.clip__bar{width:170px;height:6px;border-radius:99px;background:rgba(255,255,255,.09);overflow:hidden}
+.clip__fill{height:100%;width:0;background:linear-gradient(90deg,var(--red-deep),var(--red-hot));border-radius:99px;transition:width .4s cubic-bezier(.2,.7,.3,1)}
+.clip__reset{font-family:'Oswald',sans-serif;font-size:.64rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);border:1px solid var(--line);padding:8px 14px;border-radius:var(--r);transition:all .2s}
+.clip__reset:hover{color:#fff;border-color:var(--red)}
+.clip__grp{padding:20px 26px 8px;display:flex;align-items:center;gap:12px}
+.clip__grp .label{color:var(--muted)}
+.clip__grp i{flex:1;height:1px;background:var(--line-2)}
+.clip__list{display:grid;grid-template-columns:1fr 1fr;padding:0 14px 18px}
+@media(max-width:760px){.clip__list{grid-template-columns:1fr}}
+.ti{display:flex;gap:14px;align-items:flex-start;width:100%;text-align:left;padding:12px;border-radius:var(--r);transition:background .2s}
+.ti:hover{background:rgba(255,255,255,.028)}
+.ti:focus-visible{outline:2px solid var(--red-hot);outline-offset:-2px}
+.ti__box{flex:none;width:22px;height:22px;border:1.5px solid var(--line);border-radius:3px;margin-top:2px;position:relative;transition:background .2s,border-color .2s}
+.ti__box::after{content:"";position:absolute;left:6px;top:2px;width:6px;height:11px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg) scale(0);transition:transform .22s cubic-bezier(.2,.9,.3,1.4)}
+.ti[aria-pressed="true"] .ti__box{background:var(--red);border-color:var(--red)}
+.ti[aria-pressed="true"] .ti__box::after{transform:rotate(45deg) scale(1)}
+.ti > span:last-child{display:block;min-width:0}
+.ti__n{display:block;font-family:'Oswald',sans-serif;font-weight:500;font-size:.96rem;color:var(--white);line-height:1.35;transition:color .2s}
+.ti__w{display:block;font-size:.79rem;color:var(--dim);margin-top:2px;line-height:1.45}
+.ti[aria-pressed="true"] .ti__n{color:var(--dim);text-decoration:line-through;text-decoration-color:rgba(255,32,54,.65);text-decoration-thickness:1.5px}
+.clip__done{padding:0 26px 26px;font-size:.9rem;color:var(--green);display:none}
+.clip__done.on{display:block}
+
+/* ---------- parts ---------- */
+.parts{background:var(--ink)}
+.ptabs{display:flex;flex-wrap:wrap;gap:8px;margin-top:30px;padding-bottom:26px;border-bottom:1px solid var(--line-2)}
+.ptab{font-family:'Oswald',sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:11px 18px;border:1px solid var(--line);border-radius:var(--r);color:var(--muted);transition:all .2s}
+.ptab:hover{color:#fff;border-color:var(--red)}
+.ptab[aria-selected="true"]{background:var(--red);border-color:var(--red);color:#fff}
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;min-width:0}
+@media(max-width:960px){.pgrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.pgrid{grid-template-columns:1fr}}
+.pcard{border:1px solid var(--line);border-radius:var(--r);background:var(--panel-2);display:flex;flex-direction:column;overflow:hidden;transition:border-color .25s,transform .25s}
+.pcard:hover{border-color:rgba(206,17,38,.5);transform:translateY(-3px)}
+.pcard__img{aspect-ratio:4/3;background:#000;overflow:hidden;position:relative}
+.pcard__img img{width:100%;height:100%;object-fit:cover;opacity:.85;transition:opacity .3s,transform .5s}
+.pcard:hover .pcard__img img{opacity:1;transform:scale(1.04)}
+.pcard__flag{position:absolute;top:12px;left:12px;font-family:'Oswald',sans-serif;font-size:.58rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;background:var(--red);color:#fff;padding:5px 10px;border-radius:var(--r)}
+.pcard__body{padding:20px;display:flex;flex-direction:column;flex:1}
+.pcard__brand{font-family:'Oswald',sans-serif;font-size:.63rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--red-hot);min-height:1.1em}
+.pcard__t{font-family:'Oswald',sans-serif;font-weight:600;font-size:1rem;color:var(--white);line-height:1.35;margin:7px 0 9px}
+.pcard__p{font-size:.86rem;color:var(--muted);line-height:1.58;flex:1}
+.pcard__sku{font-family:'Rajdhani',sans-serif;font-weight:600;font-size:.8rem;color:var(--dim);letter-spacing:.05em;margin-top:14px;padding-top:12px;border-top:1px solid var(--line-2)}
+.pcard__price{font-family:'Bebas Neue',sans-serif;font-size:1.85rem;color:var(--white);letter-spacing:.02em;margin-top:10px;line-height:1}
+.pcard__ea{font-family:'Oswald',sans-serif;font-weight:500;font-size:.56rem;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);vertical-align:middle;margin-left:3px}
+.pcard__acts{margin-top:16px;display:grid;gap:8px}
+.pcard__acts a{font-family:'Oswald',sans-serif;font-size:.66rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;text-align:center;padding:11px 8px;border-radius:var(--r);transition:all .2s}
+.pcard__acts .a1{background:var(--red);color:#fff}
+.pcard__acts .a1:hover{background:var(--red-hot)}
+.pcard__acts .a2{border:1px solid var(--line);color:var(--muted)}
+.pcard__acts .a2:hover{border-color:var(--red);color:#fff}
+/* carousel: big arrows flanking a two by three grid */
+.wrap--wide{max-width:var(--wide);padding:0 34px}
+.carousel{display:grid;grid-template-columns:64px 1fr 64px;gap:20px;align-items:center;margin-top:34px}
+.carousel__arrow{
+  height:96px;border:1px solid var(--line);border-radius:6px;background:var(--panel-2);
+  color:var(--text);display:flex;align-items:center;justify-content:center;transition:all .2s;
+}
+.carousel__arrow:hover:not(:disabled){border-color:var(--red);background:var(--red);color:#fff;transform:translateY(-2px);box-shadow:0 10px 26px rgba(206,17,38,.28)}
+.carousel__arrow:disabled{opacity:.22;cursor:default}
+.carousel__arrow[hidden]{visibility:hidden;display:flex}
+.carousel__arrow svg{width:30px;height:30px;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+@media(max-width:820px){
+  .carousel{grid-template-columns:1fr;gap:0}
+  .carousel__arrow{height:52px;width:52px}
+  .carousel__arrow--prev{order:2;justify-self:start;margin-top:20px}
+  .carousel__arrow--next{order:3;justify-self:end;margin-top:-52px}
+  .pgrid{order:1}
+}
+.pager{display:flex;align-items:center;justify-content:center;gap:20px;margin-top:24px}
+.pager[hidden]{display:none}
+.pager__info{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:.9rem;color:var(--muted);letter-spacing:.04em;white-space:nowrap}
+.pager__info b{color:var(--white)}
+.pager__dots{display:flex;gap:9px}
+.pager__dots button{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.16);transition:background .2s,transform .2s}
+.pager__dots button[aria-current="true"]{background:var(--red-hot);transform:scale(1.3)}
+.pager__dots button:hover{background:var(--muted)}
+.shopall{margin-top:38px}
+
+/* ---------- video ---------- */
+.video{background:var(--panel);border-top:1px solid var(--line-2);border-bottom:1px solid var(--line-2)}
+.vidbox{position:relative;aspect-ratio:16/9;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-top:34px;background:#000}
+.vidbox iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vidbox__ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;text-align:center;padding:20px}
+.vidbox__ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.4}
+.vidbox__ph > *{position:relative;z-index:2}
+.playmark{width:78px;height:78px;border-radius:50%;background:var(--red);display:flex;align-items:center;justify-content:center}
+.playmark::after{content:"";width:0;height:0;border-left:24px solid #fff;border-top:15px solid transparent;border-bottom:15px solid transparent;margin-left:6px}
+
+/* ---------- story ---------- */
+.byline{font-family:'Oswald',sans-serif;font-size:.68rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);margin-top:16px}
+.prose{max-width:74ch;margin-top:36px}
+.prose h3{font-family:'Bebas Neue',sans-serif;font-size:1.65rem;color:var(--white);letter-spacing:.04em;margin:38px 0 12px;line-height:1.1}
+.prose h3:first-child{margin-top:0}
+.prose p{margin-bottom:16px;color:var(--muted)}
+.prose p strong{color:var(--text);font-weight:600}
+.prose a{color:var(--red-hot);text-decoration:none;border-bottom:1px solid rgba(255,32,54,.4)}
+.prose a:hover{color:#fff;border-color:#fff}
+
+/* ---------- faq ---------- */
+.faqsec{background:var(--panel);border-top:1px solid var(--line-2)}
+.faq{margin-top:40px;border-top:1px solid var(--line-2)}
+.q{border-bottom:1px solid var(--line-2)}
+.q__btn{width:100%;display:flex;align-items:flex-start;justify-content:space-between;gap:20px;text-align:left;padding:22px 0}
+.q__t{font-family:'Oswald',sans-serif;font-weight:500;font-size:1.04rem;color:var(--white);line-height:1.4}
+.q__ic{flex:none;width:26px;height:26px;border:1px solid var(--line);border-radius:50%;position:relative;margin-top:2px;transition:background .2s,border-color .2s}
+.q__ic::before,.q__ic::after{content:"";position:absolute;left:50%;top:50%;background:var(--muted);transform:translate(-50%,-50%);transition:transform .28s ease,background .2s}
+.q__ic::before{width:11px;height:1.5px}
+.q__ic::after{width:1.5px;height:11px}
+.q__btn[aria-expanded="true"] .q__ic{background:var(--red);border-color:var(--red)}
+.q__btn[aria-expanded="true"] .q__ic::before,.q__btn[aria-expanded="true"] .q__ic::after{background:#fff}
+.q__btn[aria-expanded="true"] .q__ic::after{transform:translate(-50%,-50%) rotate(90deg)}
+.q__body{overflow:hidden;max-height:0;transition:max-height .38s cubic-bezier(.2,.7,.3,1)}
+.q__body p{padding:0 0 24px;max-width:74ch;color:var(--muted);font-size:.95rem}
+
+/* ---------- blogs ---------- */
+.blogs{background:var(--ink);border-top:1px solid var(--line-2)}
+.bgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:38px}
+@media(max-width:900px){.bgrid{grid-template-columns:1fr}}
+.bcard{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--panel-2);text-decoration:none;display:flex;flex-direction:column;transition:border-color .25s,transform .25s}
+.bcard:hover{border-color:rgba(206,17,38,.5);transform:translateY(-3px)}
+.bcard__img{aspect-ratio:8/5;background:#000;overflow:hidden}
+.bcard__img img{width:100%;height:100%;object-fit:cover;opacity:.82;transition:opacity .3s,transform .5s}
+.bcard:hover .bcard__img img{opacity:1;transform:scale(1.04)}
+.bcard__body{padding:20px}
+.bcard__cat{font-family:'Oswald',sans-serif;font-size:.61rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--red-hot)}
+.bcard__t{font-family:'Oswald',sans-serif;font-weight:600;font-size:1.05rem;color:var(--white);line-height:1.35;margin:9px 0 11px}
+.bcard__m{font-size:.78rem;color:var(--dim)}
+
+/* ---------- stats ---------- */
+.stats{background:var(--panel);border-top:1px solid var(--line-2);border-bottom:1px solid var(--line-2)}
+.stats__in{max-width:var(--maxw);margin:0 auto;padding:0 28px;display:grid;grid-template-columns:repeat(4,1fr)}
+.st{padding:34px 0 34px 30px;border-left:1px solid var(--line-2)}
+.st:first-child{border-left:0;padding-left:0}
+.st__v{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.7rem,3vw,2.4rem);color:var(--white);line-height:1;letter-spacing:.02em}
+.st__v a{text-decoration:none;color:inherit}
+.st__v a:hover{color:var(--red-hot)}
+.st__k{margin-top:8px}
+@media(max-width:820px){.stats__in{grid-template-columns:1fr 1fr}.st{padding:22px 0 22px 22px}.st:nth-child(3){border-left:0;padding-left:0}.st:nth-child(n+3){border-top:1px solid var(--line-2)}}
+
+/* ---------- next step ---------- */
+.next{position:relative;overflow:hidden;text-align:center;background:var(--ink)}
+.next::before{content:"";position:absolute;inset:0;background:radial-gradient(760px 300px at 50% 0%,rgba(206,17,38,.18),transparent 70%)}
+.next__in{position:relative;z-index:2}
+.next .lede{margin:20px auto 0}
+.trust{margin-top:38px;font-family:'Bebas Neue',sans-serif;font-size:clamp(1.5rem,3vw,2.2rem);color:var(--white);letter-spacing:.06em}
+.trust span{color:var(--red-hot)}
+.next__row{display:flex;gap:13px;justify-content:center;flex-wrap:wrap;margin-top:30px}
+
+/* ---------- footer ---------- */
+.foot{border-top:1px solid var(--line-2);padding:38px 0;background:var(--panel)}
+.foot small{color:var(--dim);font-size:.79rem;max-width:78ch;display:block}
+.foot a{color:var(--muted);text-decoration:none}
+.foot a:hover{color:var(--red-hot)}
+
+/* ---------- reveal ---------- */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.3,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition-duration:.01ms!important}
+  .rv{opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<!-- ===================== NAV ===================== -->
+<nav class="nav">
+  <div class="nav__in">
+    <a class="brand" href="#top"><img src="assets/logo.png" alt="Custom Offsets"></a>
+    <div class="nav__links">
+      <a href="#swaps">The Swaps</a>
+      <a href="#bnpl">Buy Now, Pay Later</a>
+      <a href="#tools">Tool Checklist</a>
+      <a href="#parts">Parts</a>
+      <a href="#watch">Watch</a>
+      <a href="#story">Story</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a class="nav__cta" href="#parts">Shop the Build</a>
+  </div>
+  <div class="progress" id="progress"></div>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<header class="hero" id="top">
+  <div class="hero__bg"><img src="assets/hero-driveway.jpg" alt="A stock 2018 Ford F-150 in the driveway with the Vertex, aFe and wheel and tire boxes stacked beside it"></div>
+  <div class="hero__in">
+    <div class="wrap">
+      <div class="stamp">Build Feature <b>.</b> August 2026</div>
+      <h1 class="display">One Weekend.<br>One Driveway.<span class="l2">One Build.</span></h1>
+      <p class="hero__sub">
+        A stock 2018 F-150 rolled into this driveway on a Saturday morning. No shop. No two post lift.
+        No welding, no cutting, no powder coat. Just the tools you already own and a hard deadline of Monday.
+        Here is every part that went on it, every setback that cost us time, and three different wheel and tire
+        packages run back to back on the same truck, so you can see which one is actually worth living with
+        before you spend a dollar.
+      </p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#parts">See the parts</a>
+        <a class="btn btn--ghost" href="https://www.youtube.com/channel/UCnmCVfwLakc9Fd2ltaowisQ" target="_blank" rel="noopener">Watch other builds</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== QUICK SHOT SPEC BAR ===================== -->
+<section class="keyspecs">
+  <div class="keyspecs__in">
+    <div class="ks">
+      <div class="ks__l">Suspension</div>
+      <div class="ks__a">Rough Country Vertex 2.5 RR</div>
+      <div class="ks__b">2in front lift . F-150 14-26</div>
+    </div>
+    <div class="ks">
+      <div class="ks__l">Setup 01 . 20x9</div>
+      <div class="ks__a">Fuel Rebel 6</div>
+      <div class="ks__b">BFGoodrich KO3 LT295/60R20</div>
+    </div>
+    <div class="ks">
+      <div class="ks__l">Setup 02 . 22x9.5</div>
+      <div class="ks__a">Factory Reproductions FR52</div>
+      <div class="ks__b">Nitto Trail Grappler 35s</div>
+    </div>
+    <div class="ks">
+      <div class="ks__l">Setup 03 . 22x12</div>
+      <div class="ks__a">ARKON OFF-ROAD Caesar</div>
+      <div class="ks__b">Kelfire DMR R/T 33s</div>
+    </div>
+    <div class="ks ks--brands">
+      <div class="ks__l">Also going on</div>
+      <div class="ks__a">AWE Tuning . aFe Power</div>
+      <div class="ks__b">Holley Superchips . Morimoto . Coverking</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== JUMP BAND ===================== -->
+<nav class="jump" aria-label="Page sections">
+  <div class="jump__in">
+    <a href="#swaps">The Swaps</a>
+    <a href="#bnpl">Buy Now, Pay Later</a>
+    <a href="#tools">The Tool Checklist</a>
+    <a href="#parts">Full Parts List</a>
+    <a href="#watch">Watch It Now</a>
+    <a href="#story">The Build Story</a>
+    <a href="#faq">FAQ</a>
+  </div>
+</nav>
+
+<!-- ===================== THE SWAPS ===================== -->
+<section class="sec sec--swaps swaps" id="swaps">
+  <div class="wrap">
+    <div class="modes rv" role="tablist" aria-label="Choose a swap">
+      <button class="mode" role="tab" id="mode-wheels" aria-controls="box-wheels" aria-selected="true" data-mode="wheels">
+        <span class="mode__k">Wheels and tires</span>
+        <span class="mode__t">Three packages, one truck.</span>
+        <span class="mode__p">Same truck, same ride height, three complete packages. We drove all three back to back, so these notes are what it actually did.</span>
+        <span class="mode__go">Viewing this</span>
+      </button>
+      <button class="mode" role="tab" id="mode-susp" aria-controls="box-susp" aria-selected="false" tabindex="-1" data-mode="susp">
+        <span class="mode__k">Suspension</span>
+        <span class="mode__t">Three ways to lift.</span>
+        <span class="mode__p">Ride height decides what tire will fit, so it is the first call and the hardest to undo. Three routes we weighed before the truck went up.</span>
+        <span class="mode__go">Switch to this</span>
+      </button>
+    </div>
+
+    <!-- WHEELS -->
+    <div class="swapbox rv" id="box-wheels" data-swap="wheels" role="region" aria-labelledby="mode-wheels">
+      <div class="picker" role="tablist" aria-label="Wheel and tire packages">
+        <button class="pick" role="tab" id="wheels-tab-0" aria-controls="wheels-panel" aria-selected="true" data-i="0">
+          <span class="pick__n">SETUP 01</span><span class="pick__name">20x9</span><span class="pick__size">The daily driver</span>
+        </button>
+        <button class="pick" role="tab" id="wheels-tab-1" aria-controls="wheels-panel" aria-selected="false" tabindex="-1" data-i="1">
+          <span class="pick__n">SETUP 02</span><span class="pick__name">22x9.5</span><span class="pick__size">The 35in look</span>
+        </button>
+        <button class="pick" role="tab" id="wheels-tab-2" aria-controls="wheels-panel" aria-selected="false" tabindex="-1" data-i="2">
+          <span class="pick__n">SETUP 03</span><span class="pick__name">22x12</span><span class="pick__size">Max poke</span>
+        </button>
+      </div>
+      <div class="stage" id="wheels-panel" role="tabpanel" aria-labelledby="wheels-tab-0">
+        <div class="stage__vis">
+          <span class="stage__badge" data-role="badge"></span>
+          <img src="assets/setup-20x9.jpg" alt="F-150 on the 20x9 package" class="on" data-i="0">
+          <img src="assets/setup-22x95.jpg" alt="F-150 on the 22x9.5 package" data-i="1">
+          <img src="assets/setup-22x12.jpg" alt="F-150 on the 22x12 package" data-i="2">
+          <div class="stage__over"><b>Driveway reality</b><span data-role="note"></span></div>
+        </div>
+        <div class="stage__data">
+          <div class="stage__eyebrow" data-role="eyebrow"></div>
+          <div class="stage__name" data-role="name"></div>
+          <div class="stage__prod" data-role="prod"></div>
+          <div class="stage__feature"><span class="k" data-role="featureK"></span><span class="v" data-role="featureV"></span></div>
+          <p class="stage__blurb" data-role="blurb"></p>
+          <div class="chips" data-role="chips"></div>
+          <div class="ruler">
+            <div class="ruler__top"><span class="label">Offset</span><span class="ruler__val" data-role="scaleVal"></span></div>
+            <div class="ruler__track">
+              <div class="ruler__ticks"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              <div class="ruler__zero" data-role="zero"></div>
+              <div class="ruler__pin" data-role="pin"></div>
+            </div>
+            <div class="ruler__ends"><span class="label">+60 . tucked in</span><span class="label">sticks out . -60</span></div>
+          </div>
+          <div class="meters__h"><span class="label">Our take, not a spec</span><i></i></div>
+          <div class="meters" data-role="meters"></div>
+          <div class="stage__foot"><span class="k">Package price</span><span class="v" data-role="price"></span></div>
+          <div class="stage__cta"><a class="btn btn--primary btn--wide" data-role="cta" href="#" target="_blank" rel="noopener"></a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SUSPENSION -->
+    <div class="swapbox rv" id="box-susp" data-swap="susp" role="region" aria-labelledby="mode-susp" hidden>
+      <div class="picker" role="tablist" aria-label="Suspension options">
+        <button class="pick" role="tab" id="susp-tab-0" aria-controls="susp-panel" aria-selected="true" data-i="0">
+          <span class="pick__n">OPTION 01</span><span class="pick__name">2in</span><span class="pick__size">What we ran</span>
+        </button>
+        <button class="pick" role="tab" id="susp-tab-1" aria-controls="susp-panel" aria-selected="false" tabindex="-1" data-i="1">
+          <span class="pick__n">OPTION 02</span><span class="pick__name">TK</span><span class="pick__size">Details coming</span>
+        </button>
+        <button class="pick" role="tab" id="susp-tab-2" aria-controls="susp-panel" aria-selected="false" tabindex="-1" data-i="2">
+          <span class="pick__n">OPTION 03</span><span class="pick__name">TK</span><span class="pick__size">Details coming</span>
+        </button>
+      </div>
+      <div class="stage" id="susp-panel" role="tabpanel" aria-labelledby="susp-tab-0">
+        <div class="stage__vis">
+          <span class="stage__badge" data-role="badge"></span>
+          <img src="assets/susp-01.jpg" alt="Suspension option one" class="on" data-i="0">
+          <img src="assets/susp-02.jpg" alt="Suspension option two" data-i="1">
+          <img src="assets/susp-03.jpg" alt="Suspension option three" data-i="2">
+          <div class="stage__over"><b>Driveway reality</b><span data-role="note"></span></div>
+        </div>
+        <div class="stage__data">
+          <div class="stage__eyebrow" data-role="eyebrow"></div>
+          <div class="stage__name" data-role="name"></div>
+          <div class="stage__prod" data-role="prod"></div>
+          <div class="stage__feature"><span class="k" data-role="featureK"></span><span class="v" data-role="featureV"></span></div>
+          <p class="stage__blurb" data-role="blurb"></p>
+          <div class="chips" data-role="chips"></div>
+
+          <div class="liftrow">
+            <div class="lift">
+              <div class="lift__l label">Lift</div>
+              <div class="lift__wrap">
+                <div class="lift__scale" data-role="liftScale"></div>
+                <div class="lift__tube">
+                  <div class="lift__grid" data-role="liftGrid"></div>
+                  <div class="lift__fill" data-role="liftFill"></div>
+                  <div class="lift__mark" data-role="liftMark"></div>
+                  <div class="lift__chip" data-role="liftChip"></div>
+                </div>
+              </div>
+              <div class="lift__base label">Stock</div>
+            </div>
+            <div>
+              <div class="meters__h" style="margin-top:0"><span class="label">Our take, not a spec</span><i></i></div>
+              <div class="meters" data-role="meters"></div>
+            </div>
+          </div>
+
+          <div class="stage__foot"><span class="k">Price</span><span class="v" data-role="price"></span></div>
+          <div class="stage__cta"><a class="btn btn--primary btn--wide" data-role="cta" href="#" target="_blank" rel="noopener"></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== DRIVEWAY READY + BUY NOW PAY LATER ===================== -->
+<section class="sec bnpl" id="bnpl">
+  <div class="wrap">
+    <div class="rv">
+      <div class="kicker">You win</div>
+      <h2 class="display">Finished by<br><span class="red">Sunday night.</span></h2>
+      <p class="lede" style="margin-top:20px">
+        Zero shop bills all weekend. The whole build went together in a driveway with at-home tools, and
+        <span class="tk">TK_SAVINGS</span> in labor stayed in your pocket and went straight back into parts.
+        The only thing we booked was Monday's alignment, and after a lift plus a new offset, that one is
+        not optional.
+      </p>
+    </div>
+
+    <div class="showcase rv">
+      <div class="showcase__main"><img src="assets/build-full.jpg" alt="The finished 2018 F-150 after the weekend build"></div>
+    </div>
+
+    <div class="finbanner rv">
+      <div class="finbanner__k">Buy now, pay later</div>
+      <div class="finbanner__t">Build now. Pay over time.</div>
+      <p class="finbanner__p">
+        Two ways to spread the build out: financing through Affirm as low as 0% APR, or lease-to-own through
+        Katapult with as low as $1 down and no credit needed. Checking your options takes about a minute and
+        won't touch your credit score.
+      </p>
+      <button class="finbanner__btn" type="button" id="finOpen">Get pre-qualified &amp; start your build today</button>
+      <div class="finbanner__lenders">
+        <span>Payment partners</span>
+        <img src="assets/affirm-logo.svg" alt="Affirm">
+        <img src="assets/katapult-logo.svg" alt="Katapult">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FINANCING MODAL ===================== -->
+<div class="modal" id="finModal" role="dialog" aria-modal="true" aria-labelledby="finModalTitle" aria-hidden="true">
+  <div class="modal__scrim" data-close></div>
+  <div class="modal__panel">
+    <button class="modal__x" type="button" data-close aria-label="Close financing options">&#10005;</button>
+    <div class="modal__k">Buy now, pay later</div>
+    <div class="modal__t" id="finModalTitle">Two ways to pay over time.</div>
+    <p class="modal__p">
+      Pre-qualify in 60 seconds with no impact to your credit score. Pick the option that fits your build,
+      get your approval amount, then start ordering parts.
+    </p>
+    <div class="fin">
+      <div class="fincard">
+        <div class="fincard__logo"><img src="assets/affirm-logo.svg" alt="Affirm"><span class="tk">TK_LOGO</span></div>
+        <span class="pill">As low as 0% APR</span>
+        <h4>Build. Pay monthly.</h4>
+        <p>
+          Finance the entire build through Custom Offsets: wheels, tires, suspension, performance, and
+          accessories on a single approval. As low as 0% APR for qualified buyers, with predictable monthly
+          payments and no late fees or hidden fees.
+        </p>
+        <a class="btn btn--primary" href="https://www.customwheeloffset.com/" target="_blank" rel="noopener">Pre-qualify with Affirm</a>
+      </div>
+      <div class="fincard">
+        <div class="fincard__logo"><img src="assets/katapult-logo.svg" alt="Katapult"><span class="tk">TK_LOGO</span></div>
+        <span class="pill">As low as $1 down</span>
+        <h4>No credit needed.</h4>
+        <p>
+          No credit? No problem. Katapult's lease-to-own option puts the parts on your truck for as low as
+          $1 down, with an approval decision in seconds and no credit needed.
+        </p>
+        <a class="btn btn--ghost" href="https://www.customwheeloffset.com/" target="_blank" rel="noopener">Pre-qualify with Katapult</a>
+      </div>
+    </div>
+    <p class="finnote">Subject to approval. Affirm financing and Katapult lease-to-own are separate options with their own terms. Learn more about payment options at Custom Offsets.</p>
+  </div>
+</div>
+
+<!-- ===================== TOOL CHECKLIST ===================== -->
+<section class="sec tools" id="tools">
+  <div class="wrap">
+    <div class="rv">
+      <div class="kicker">Before you start</div>
+      <h2 class="display">The tool checklist.</h2>
+      <p class="lede" style="margin-top:20px">
+        Nothing here is exotic and nothing needs a shop account. Tick each one off as you dig it out of the
+        garage. If you cannot clear the first list, do not put the truck in the air on Saturday.
+      </p>
+    </div>
+
+    <div class="clip rv">
+      <div class="clip__top">
+        <div class="clip__ttl">Driveway Packing List</div>
+        <div class="clip__meta">
+          <div class="clip__count"><span id="clipN">0</span> of 14 packed</div>
+          <div class="clip__bar"><div class="clip__fill" id="clipFill"></div></div>
+          <button class="clip__reset" id="clipReset" type="button">Reset list</button>
+        </div>
+      </div>
+
+      <div class="clip__grp"><span class="label">Non negotiable</span><i></i></div>
+      <div class="clip__list">
+        <button class="ti" type="button" aria-pressed="false"><span class="ti__box"></span><span><span class="ti__n">Floor jack</span><span class="ti__w">Rated above the front axle weight</span></span></button>
+        <button class="ti" type="button" aria-pressed="false"><span class="ti__box"></span><span><span class="ti__n">Four jack stands</span><span class="ti__w">Tall enough to clear a 2in lift</span></span></button>
+        <button class="ti" type="button" aria-pressed="false"><span class="ti__box"></span><span><span class="ti__n">Torque wrench</span><span class="ti__w">Suspension is not a hand tight job</span></span></button>
+        <button class="ti" type="button" aria-pressed="false"><span class="ti__box"></span><span><span class="ti__n">Socket set, metric and SAE</span><span class="ti__w">Deep and shallow, 3/8 and 1/2 drive</span></span></button>
+        <button class="ti" type="button" aria-pressed="false"><span class="ti__box"></span><span><span class="ti__n">Breaker bar</span><span class="ti__w">The one that saves the weekend</span></span></button>
+        <button class="ti" type="button" aria-pressed="false"><span class="ti__box"></span><span><span class="ti__n">Penetrating oil</span><span class="ti__w">Spray the bolts the night before</span></span></button>
+        <button class="ti" type="button" aria-pressed="false"><span class="ti__box"></span><span><span class="ti__n">Trim removal tools</span><span class="ti__w">Lighting and interior work</span></span></button>
+        <button class="ti" type="button" aria-pressed="false"><span class="ti__box"></span><span><span class="ti__n">Torx and hex bit set</span><span class="ti__w">Lighting hardware</span></span></button>
+        <button class="ti" type="button" aria-pressed="false"><span class="ti__box"></span><span><span class="ti__n">Tire pressure gauge</span><span class="ti__w">Reset it after every setup change</span></span></button>
+      </div>
+
+      <div class="clip__grp"><span class="label">Made it faster</span><i></i></div>
+      <div class="clip__list">
+        <button class="ti" type="button" aria-pressed="false"><span class="ti__box"></span><span><span class="ti__n">Impact wrench</span><span class="ti__w">Cuts hours off three wheel swaps</span></span></button>
+        <button class="ti" type="button" aria-pressed="false"><span class="ti__box"></span><span><span class="ti__n">Second floor jack</span><span class="ti__w">Supporting the axle while you work</span></span></button>
+        <button class="ti" type="button" aria-pressed="false"><span class="ti__box"></span><span><span class="ti__n">Work light</span><span class="ti__w">Day one always runs past dark</span></span></button>
+        <button class="ti" type="button" aria-pressed="false"><span class="ti__box"></span><span><span class="ti__n">Creeper or a moving blanket</span><span class="ti__w">Driveways are unforgiving</span></span></button>
+        <button class="ti" type="button" aria-pressed="false"><span class="ti__box"></span><span><span class="ti__n">A second set of hands</span><span class="ti__w">Free, and worth more than any tool</span></span></button>
+      </div>
+
+      <div class="clip__done" id="clipDone">Everything is packed. Go build it.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PARTS ===================== -->
+<!-- PRODUCT IMAGES: every .pcard__img <img> below points at a local placeholder in assets/.
+     To use the live Custom Offsets product photos, replace each src with the product image URL
+     from that item's product page. Nothing else needs to change. -->
+<section class="sec parts" id="parts">
+  <div class="wrap wrap--wide">
+    <div class="rv">
+      <div class="kicker">The direct specs</div>
+      <h2 class="display">Full parts list.</h2>
+      <p class="lede" style="margin-top:20px">
+        Every part is on Custom Offsets with fitment proof pulled from 100,000+ real owner trucks in the
+        gallery. Wheels and tires are listed individually here. Switch to the Wheels &amp; Tires tab to see all
+        three as complete packages.
+      </p>
+      <div class="ptabs" role="tablist" aria-label="Parts categories">
+        <button class="ptab" role="tab" aria-selected="true" data-cat="all">All Parts</button>
+        <button class="ptab" role="tab" aria-selected="false" data-cat="susp">Suspension</button>
+        <button class="ptab" role="tab" aria-selected="false" data-cat="wt">Wheels &amp; Tires</button>
+        <button class="ptab" role="tab" aria-selected="false" data-cat="perf">Performance</button>
+        <button class="ptab" role="tab" aria-selected="false" data-cat="light">Lighting</button>
+        <button class="ptab" role="tab" aria-selected="false" data-cat="int">Interior</button>
+      </div>
+    </div>
+
+    <div class="carousel rv">
+      <button class="carousel__arrow carousel__arrow--prev" type="button" id="pgPrev" aria-label="Previous parts"><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
+    <div class="pgrid" id="pgrid">
+
+      <article class="pcard rv" data-cat="susp">
+        <div class="pcard__img"><img src="assets/part-suspension.jpg" alt="Rough Country Vertex 2.5 RR coilovers"></div>
+        <div class="pcard__body">
+          <div class="pcard__brand">Rough Country</div>
+          <div class="pcard__t">Vertex 2.5 RR Leveling Coilovers, 2in, Ford F-150 4WD (14-26)</div>
+          <p class="pcard__p">Two inches of front lift on 2.5in remote reservoir coilovers, enough to level the truck and open up tire room. No cutting, no welding, and no spring press, which is exactly why it made the cut for a driveway weekend.</p>
+          <div class="pcard__sku">SKU <span class="tk">TK_SKU</span></div>
+          <div class="pcard__price num">$1,299.95</div>
+          <div class="pcard__acts">
+            <a class="a1" href="https://www.customwheeloffset.com/" target="_blank" rel="noopener">View Product</a>
+            <a class="a2" href="https://www.customwheeloffset.com/" target="_blank" rel="noopener">Shop Suspension</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="pcard rv" data-cat="pkg">
+        <div class="pcard__img"><span class="pcard__flag">Complete package</span><img src="assets/pkg-20x9.jpg" alt="Setup 01 wheel and tire package"></div>
+        <div class="pcard__body">
+          <div class="pcard__brand">Fuel Off-Road . BFGoodrich</div>
+          <div class="pcard__t">Setup 01 Package . Rebel 6 20x9 with All-Terrain T/A KO3</div>
+          <p class="pcard__p">Mounted, balanced, and shipped as one package. The daily driver setup, with the most sidewall of the three and the least drama on a highway commute.</p>
+          <div class="pcard__sku">PKG D68020908950 . BFG44461</div>
+          <div class="pcard__price num">$3,691.32</div>
+          <div class="pcard__acts">
+            <a class="a1" href="https://www.customwheeloffset.com/buy-wheel-offset2/D68020908950/BFG44461/fuel-rebel-6-20x9-1-bfgoodrich-all-terrain-t-a-ko3-lt295-60r20?vehicle_type=Truck&amp;year=2018&amp;make=Ford&amp;model=F-150&amp;trim=Lariat&amp;drive=4WD&amp;modification=Minor+Plastic+Trimming&amp;rubbing=No+rubbing+or+scrubbing&amp;suspension=Leveling+Kit" target="_blank" rel="noopener">View Package</a>
+            <a class="a2" href="https://www.customwheeloffset.com/" target="_blank" rel="noopener">Shop Packages</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="pcard rv" data-cat="pkg">
+        <div class="pcard__img"><span class="pcard__flag">Complete package</span><img src="assets/pkg-22x95.jpg" alt="Setup 02 wheel and tire package"></div>
+        <div class="pcard__body">
+          <div class="pcard__brand">Factory Reproductions . Nitto</div>
+          <div class="pcard__t">Setup 02 Package . FR52 22x9.5 with Trail Grappler 35s</div>
+          <p class="pcard__p">Mounted, balanced, and shipped as one package. The tallest tire of the three on the most conservative wheel, which is how you get a 35in look without hanging out past the fender.</p>
+          <div class="pcard__sku">PKG 52295443601 . 205610</div>
+          <div class="pcard__price num">$4,291.04</div>
+          <div class="pcard__acts">
+            <a class="a1" href="https://www.customwheeloffset.com/buy-wheel-offset2/52295443601/205610/factory-reproductions-fr52-22x95-44-nitto-trail-grappler-35x1250r22lt?vehicle_type=Truck&amp;year=2018&amp;make=Ford&amp;model=F-150&amp;trim=Lariat&amp;drive=4WD&amp;modification=Minor+Plastic+Trimming&amp;rubbing=No+rubbing+or+scrubbing&amp;suspension=Leveling+Kit" target="_blank" rel="noopener">View Package</a>
+            <a class="a2" href="https://www.customwheeloffset.com/" target="_blank" rel="noopener">Shop Packages</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="pcard rv" data-cat="pkg">
+        <div class="pcard__img"><span class="pcard__flag">Complete package</span><img src="assets/pkg-22x12.jpg" alt="Setup 03 wheel and tire package"></div>
+        <div class="pcard__body">
+          <div class="pcard__brand">ARKON OFF-ROAD . Kelfire</div>
+          <div class="pcard__t">Setup 03 Package . Caesar 22x12 with DMR R/T 33s</div>
+          <p class="pcard__p">Mounted, balanced, and shipped as one package. Twelve inches wide at -51mm, which is the setup that changes the silhouette of the truck and asks the most from your fenders.</p>
+          <div class="pcard__sku">PKG K14922208945 . 1912002333</div>
+          <div class="pcard__price num">$3,476.16</div>
+          <div class="pcard__acts">
+            <a class="a1" href="https://www.customwheeloffset.com/buy-wheel-offset2/K14922208945/1912002333/arkon-off-road-caesar-22x12-51-kelfire-dmr-rt-33x1250r22lt?vehicle_type=Truck&amp;year=2018&amp;make=Ford&amp;model=F-150&amp;trim=Lariat&amp;drive=4WD&amp;modification=Minor+Plastic+Trimming&amp;rubbing=No+rubbing+or+scrubbing&amp;suspension=Leveling+Kit" target="_blank" rel="noopener">View Package</a>
+            <a class="a2" href="https://www.customwheeloffset.com/" target="_blank" rel="noopener">Shop ARKON OFF-ROAD</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="pcard rv" data-cat="wheel">
+        <div class="pcard__img"><img src="assets/wheel-rebel6.jpg" alt="Fuel Rebel 6 20x9 wheel"></div>
+        <div class="pcard__body">
+          <div class="pcard__brand">Fuel Off-Road</div>
+          <div class="pcard__t">Rebel 6 20x9 +1mm</div>
+          <p class="pcard__p">The narrowest wheel of the three and the only 20in in the group. An offset of +1mm puts backspacing at about 5in, close to factory and the least demanding on fenders and geometry.</p>
+          <div class="pcard__sku">D68020908950 . <span class="tk">TK_LINK</span></div>
+          <div class="pcard__price num">$399.00 <span class="pcard__ea">each</span></div>
+          <div class="pcard__acts">
+            <a class="a1" href="https://www.customwheeloffset.com/" target="_blank" rel="noopener">View Product</a>
+            <a class="a2" href="https://www.customwheeloffset.com/" target="_blank" rel="noopener">Shop Wheels</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="pcard rv" data-cat="wheel">
+        <div class="pcard__img"><img src="assets/wheel-fr52.jpg" alt="Factory Reproductions FR52 22x9.5 wheel"></div>
+        <div class="pcard__body">
+          <div class="pcard__brand">Factory Reproductions</div>
+          <div class="pcard__t">FR52 22x9.5 +44mm</div>
+          <p class="pcard__p">A factory style face in a 22in diameter at a tucked +44mm, which works out to about 7in of backspacing. This is the wheel that lets a 35in tire look intentional and stay inside the fender line.</p>
+          <div class="pcard__sku">52295443601 . <span class="tk">TK_LINK</span></div>
+          <div class="pcard__price num">$475.00 <span class="pcard__ea">each</span></div>
+          <div class="pcard__acts">
+            <a class="a1" href="https://www.customwheeloffset.com/" target="_blank" rel="noopener">View Product</a>
+            <a class="a2" href="https://www.customwheeloffset.com/" target="_blank" rel="noopener">Shop Wheels</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="pcard rv" data-cat="wheel">
+        <div class="pcard__img"><img src="assets/wheel-caesar.jpg" alt="ARKON OFF-ROAD Caesar 22x12 wheel"></div>
+        <div class="pcard__body">
+          <div class="pcard__brand">ARKON OFF-ROAD</div>
+          <div class="pcard__t">Caesar 22x12 -51mm</div>
+          <p class="pcard__p">Twelve inches wide at -51mm, or about 4.5in of backspacing. This is the aggressive end of the range and the single part here that changes the truck most from fifty feet away.</p>
+          <div class="pcard__sku">K14922208945 . <span class="tk">TK_LINK</span></div>
+          <div class="pcard__price num">$599.00 <span class="pcard__ea">each</span></div>
+          <div class="pcard__acts">
+            <a class="a1" href="https://www.customwheeloffset.com/" target="_blank" rel="noopener">View Product</a>
+            <a class="a2" href="https://www.customwheeloffset.com/" target="_blank" rel="noopener">Shop ARKON OFF-ROAD</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="pcard rv" data-cat="tire">
+        <div class="pcard__img"><img src="assets/tire-ko3.jpg" alt="BFGoodrich All-Terrain T/A KO3 tire"></div>
+        <div class="pcard__body">
+          <div class="pcard__brand">BFGoodrich</div>
+          <div class="pcard__t">All-Terrain T/A KO3, LT295/60R20</div>
+          <p class="pcard__p">A metric size that works out to roughly 34in tall. The all-terrain that does not make you accept road noise as the price of tread, and the most comfortable of the three on a daily commute.</p>
+          <div class="pcard__sku">BFG44461 . <span class="tk">TK_LINK</span></div>
+          <div class="pcard__price num">$523.83 <span class="pcard__ea">each</span></div>
+          <div class="pcard__acts">
+            <a class="a1" href="https://www.customwheeloffset.com/" target="_blank" rel="noopener">View Product</a>
+            <a class="a2" href="https://www.customwheeloffset.com/" target="_blank" rel="noopener">Shop Tires</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="pcard rv" data-cat="tire">
+        <div class="pcard__img"><img src="assets/tire-trailgrappler.jpg" alt="Nitto Trail Grappler tire"></div>
+        <div class="pcard__body">
+          <div class="pcard__brand">Nitto</div>
+          <div class="pcard__t">Trail Grappler, 35x12.50R22LT</div>
+          <p class="pcard__p">A true 35in mud terrain and the tallest tire we ran all weekend. The 35s fill the fender gap the lift opens up, and they change the stance the moment they are on.</p>
+          <div class="pcard__sku">205610 . <span class="tk">TK_LINK</span></div>
+          <div class="pcard__price num">$597.76 <span class="pcard__ea">each</span></div>
+          <div class="pcard__acts">
+            <a class="a1" href="https://www.customwheeloffset.com/" target="_blank" rel="noopener">View Product</a>
+            <a class="a2" href="https://www.customwheeloffset.com/" target="_blank" rel="noopener">Shop Tires</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="pcard rv" data-cat="tire">
+        <div class="pcard__img"><img src="assets/tire-dmrrt.jpg" alt="Kelfire DMR R/T tire"></div>
+        <div class="pcard__body">
+          <div class="pcard__brand">Kelfire</div>
+          <div class="pcard__t">DMR R/T, 33x12.50R22LT</div>
+          <p class="pcard__p">A rugged terrain that splits the difference between an all-terrain and a mud terrain. At 33in it is the shortest of the three, which is what keeps a 12 wide wheel workable.</p>
+          <div class="pcard__sku">1912002333 . <span class="tk">TK_LINK</span></div>
+          <div class="pcard__price num">$270.04 <span class="pcard__ea">each</span></div>
+          <div class="pcard__acts">
+            <a class="a1" href="https://www.customwheeloffset.com/" target="_blank" rel="noopener">View Product</a>
+            <a class="a2" href="https://www.customwheeloffset.com/" target="_blank" rel="noopener">Shop Tires</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="pcard rv" data-cat="perf">
+        <div class="pcard__img"><img src="assets/part-exhaust.jpg" alt="AWE Tuning 0FG single exit exhaust"></div>
+        <div class="pcard__body">
+          <div class="pcard__brand">AWE Tuning</div>
+          <div class="pcard__t">0FG Single Exit Exhaust</div>
+          <p class="pcard__p">A single exit 0FG system finished with 4.5in diamond black tips. The biggest personality change of the whole weekend and the one your neighbors notice first.</p>
+          <div class="pcard__sku">AWE-3015-23058</div>
+          <div class="pcard__price num">$1,095.00</div>
+          <div class="pcard__acts">
+            <a class="a1" href="https://www.customwheeloffset.com/store/performance/125513/awe-tuning-0fg-single-exit-performance-exhaust-system-45in-diamond-black-tips-15-20-ford-f-150?year=2018&amp;make=Ford&amp;model=F-150&amp;trim=Lariat&amp;drive=4WD&amp;modification=Minor+Plastic+Trimming&amp;rubbing=No+rubbing+or+scrubbing&amp;suspension=Leveling+Kit" target="_blank" rel="noopener">View Product</a>
+            <a class="a2" href="https://www.customwheeloffset.com/" target="_blank" rel="noopener">Shop Exhaust</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="pcard rv" data-cat="perf">
+        <div class="pcard__img"><img src="assets/part-intake.jpg" alt="aFe Power Momentum XP cold air intake"></div>
+        <div class="pcard__body">
+          <div class="pcard__brand">aFe Power</div>
+          <div class="pcard__t">Momentum XP Cold Air Intake</div>
+          <p class="pcard__p">Black housing with Pro 5R filter media for the 5.0L V8. Hand tools only and roughly a coffee break to install, which is exactly why it belongs on a weekend list.</p>
+          <div class="pcard__sku">50-30024R</div>
+          <div class="pcard__price num">$593.00</div>
+          <div class="pcard__acts">
+            <a class="a1" href="https://www.customwheeloffset.com/store/performance/61636/afe-power-momentum-xp-cai-system-black-w-pro-5r-filter-media-15-20-ford-f-150-50l-v8" target="_blank" rel="noopener">View Product</a>
+            <a class="a2" href="https://www.customwheeloffset.com/" target="_blank" rel="noopener">Shop Intakes</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="pcard rv" data-cat="perf">
+        <div class="pcard__img"><img src="assets/part-tuner.jpg" alt="Holley Superchips Flashcal handheld tuner"></div>
+        <div class="pcard__body">
+          <div class="pcard__brand">Holley Superchips</div>
+          <div class="pcard__t">Flashcal Handheld Tuner</div>
+          <p class="pcard__p">Plugs into the OBD port under the dash. The Flashcal is also how you tell the truck it is riding on a different tire size now, which matters the second you leave stock behind.</p>
+          <div class="pcard__sku">SKU 1545</div>
+          <div class="pcard__price num">$299.95</div>
+          <div class="pcard__acts">
+            <a class="a1" href="https://www.holley.com/products/tuners_and_programmers/handheld_tuners/parts/1545" target="_blank" rel="noopener">View Product</a>
+            <a class="a2" href="https://www.customwheeloffset.com/" target="_blank" rel="noopener">Shop Tuners</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="pcard rv" data-cat="light">
+        <div class="pcard__img"><img src="assets/part-headlights.jpg" alt="Morimoto XB Hybrid LED headlights"></div>
+        <div class="pcard__body">
+          <div class="pcard__brand">Morimoto</div>
+          <div class="pcard__t">XB Hybrid LED Headlights</div>
+          <p class="pcard__p">Direct fit, plug and play, no harness surgery required. The fastest visual win on this entire list and the one that makes the truck look newer than it actually is.</p>
+          <div class="pcard__sku">LF551.2-MOR</div>
+          <div class="pcard__price num">$999.00</div>
+          <div class="pcard__acts">
+            <a class="a1" href="https://www.customwheeloffset.com/store/lighting/191868/morimoto-xb-hybrid-led-headlights?year=2018&amp;make=Ford&amp;model=F-150&amp;trim=Lariat&amp;drive=4WD&amp;modification=Minor+Plastic+Trimming&amp;rubbing=No+rubbing+or+scrubbing&amp;suspension=Leveling+Kit" target="_blank" rel="noopener">View Product</a>
+            <a class="a2" href="https://www.customwheeloffset.com/" target="_blank" rel="noopener">Shop Lighting</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="pcard rv" data-cat="light">
+        <div class="pcard__img"><img src="assets/part-taillights.jpg" alt="Morimoto XB LED smoked taillights"></div>
+        <div class="pcard__body">
+          <div class="pcard__brand">Morimoto</div>
+          <div class="pcard__t">XB LED Taillights, Smoked Pair</div>
+          <p class="pcard__p">Sequential turn signal in a smoked housing. Two connectors and a handful of bolts per side, so it is the job you hand to whoever showed up to help you.</p>
+          <div class="pcard__sku">LF723-MOR</div>
+          <div class="pcard__price num">$709.00</div>
+          <div class="pcard__acts">
+            <a class="a1" href="https://www.customwheeloffset.com/store/lighting/112934/morimoto-xb-led-tails-pair-smoked-15-20-ford-f-150?year=2018&amp;make=Ford&amp;model=F-150&amp;trim=Lariat&amp;drive=4WD&amp;modification=Minor+Plastic+Trimming&amp;rubbing=No+rubbing+or+scrubbing&amp;suspension=Leveling+Kit" target="_blank" rel="noopener">View Product</a>
+            <a class="a2" href="https://www.customwheeloffset.com/" target="_blank" rel="noopener">Shop Lighting</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="pcard rv" data-cat="int">
+        <div class="pcard__img"><img src="assets/part-seats-front.jpg" alt="Coverking Skanda front row seat covers"></div>
+        <div class="pcard__body">
+          <div class="pcard__brand">Coverking</div>
+          <div class="pcard__t">Skanda Neosupreme Seat Covers, Front Row</div>
+          <p class="pcard__p">Mossy Oak Shadow Grass Blades with black sides. A Sunday afternoon job that costs you nothing but patience and completely changes the inside of the truck.</p>
+          <div class="pcard__sku">CSC2MO07FD10093-CVRKN</div>
+          <div class="pcard__price num">$194.99</div>
+          <div class="pcard__acts">
+            <a class="a1" href="https://www.customwheeloffset.com/" target="_blank" rel="noopener">View Product</a>
+            <a class="a2" href="https://www.customwheeloffset.com/" target="_blank" rel="noopener">Shop Interior</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="pcard rv" data-cat="int">
+        <div class="pcard__img"><img src="assets/part-seats-rear.jpg" alt="Coverking Skanda rear row seat covers"></div>
+        <div class="pcard__body">
+          <div class="pcard__brand">Coverking</div>
+          <div class="pcard__t">Skanda Neosupreme Seat Covers, Rear Row</div>
+          <p class="pcard__p">The matching rear bench cover in the same Neosupreme material. Do this one first, since the rear bench is by far the easier of the two to learn on.</p>
+          <div class="pcard__sku">CSC2MO07FD9808-CVRKN</div>
+          <div class="pcard__price num">$194.99</div>
+          <div class="pcard__acts">
+            <a class="a1" href="https://www.customwheeloffset.com/" target="_blank" rel="noopener">View Product</a>
+            <a class="a2" href="https://www.customwheeloffset.com/" target="_blank" rel="noopener">Shop Interior</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+      <button class="carousel__arrow carousel__arrow--next" type="button" id="pgNext" aria-label="Next parts"><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
+    </div>
+
+    <div class="pager rv" id="pager" hidden>
+      <div class="pager__info">Page <b id="pgNow">1</b> of <b id="pgTotal">1</b> <span id="pgCount"></span></div>
+      <div class="pager__dots" id="pgDots"></div>
+    </div>
+
+    <div class="shopall rv">
+      <a class="btn btn--primary btn--wide" href="https://www.customwheeloffset.com/" target="_blank" rel="noopener">Shop all parts</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== VIDEO ===================== -->
+<section class="sec video" id="watch">
+  <div class="wrap">
+    <div class="rv">
+      <div class="kicker">Watch it now</div>
+      <h2 class="display">Watch the full build.</h2>
+      <p class="lede" style="margin-top:20px">
+        Stock F-150 to finished truck in two days. One driveway, at-home tools, every install and every
+        setback on camera. Roll the video.
+      </p>
+    </div>
+    <div class="vidbox rv">
+      <!-- Replace this placeholder block with the live embed:
+           <iframe src="https://www.youtube.com/embed/TK_VIDEO_ID" title="One Weekend. One Driveway. One Build."
+                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                   allowfullscreen loading="lazy"></iframe> -->
+      <div class="vidbox__ph">
+        <img src="assets/video-poster.jpg" alt="Video placeholder">
+        <div class="playmark" aria-hidden="true"></div>
+        <div class="label" style="color:var(--text)">YouTube embed goes here</div>
+        <div><span class="tk">TK_VIDEO_ID</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== STORY ===================== -->
+<section class="sec" id="story">
+  <div class="wrap">
+    <div class="rv">
+      <div class="kicker">The build story</div>
+      <h2 class="display">Can you really<br>do it in a weekend?</h2>
+      <div class="byline">Custom Offsets Build Team . August 2026 . <span class="tk">TK</span> Min Read</div>
+    </div>
+    <div class="prose rv">
+      <p>
+        Most build videos start in a shop. Lift in the floor, air lines in the ceiling, a wall of tools
+        somebody else paid for. That is not where your truck lives. Your truck lives in a driveway, next to
+        a garage that is already half full, and the only window you get is Saturday and Sunday.
+      </p>
+      <p>
+        So we gave ourselves the same window. <strong>A stock 2018 F-150, a pile of boxes, and until Monday
+        morning.</strong> No welding, no cutting, no powder coat, and nothing you would not find in a normal
+        household garage. If it needed a shop, it did not go on the truck.
+      </p>
+
+      <h3>Start with the suspension, because everything else waits on it</h3>
+      <p>
+        The Rough Country Vertex 2.5 RR coilovers went on first for one reason: every wheel and tire decision
+        after them depends on ride height. Two inches up front changes what fits, what rubs, and what your fender gap
+        looks like in a photo. Doing it in any other order means measuring twice and guessing once.
+      </p>
+      <p><span class="tk">TK_STORY_SUSPENSION</span> Two or three paragraphs on the actual install. What took the longest, what surprised you, what a first timer should know.</p>
+
+      <h3>Lighting, because it is the fastest win you will get all weekend</h3>
+      <p>
+        Morimoto XB heads and tails are plug and play, which on a weekend build is worth more than any spec
+        on the box. You get a visual change in under an hour that makes the truck read as newer than it is.
+      </p>
+      <p><span class="tk">TK_STORY_LIGHTING</span> What actually happened. Any trim clips broken, any connector that fought back.</p>
+
+      <h3>Performance, where the truck finally starts to sound like a build</h3>
+      <p>
+        The AWE 0FG exhaust, the aFe Momentum XP intake, and the Flashcal all went on as a group. None of
+        them individually take long. Together they are the moment the truck stops being a stock truck with
+        new wheels and starts being <em>yours</em>.
+      </p>
+      <p><span class="tk">TK_STORY_PERFORMANCE</span> Before and after impressions, the warning light check, what the Flashcal asked for.</p>
+
+      <h3>Wheels and tires, three times over</h3>
+      <p>
+        This is where the weekend got long. Running a 20x9, a 22x9.5, and a 22x12 back to back on one truck
+        means four corners, three times, plus a drive after each one. Running them back to back is also the
+        only honest way to answer the question everybody actually has, which is not <em>can I fit it</em> but
+        <em>which one do I want to live with</em>.
+      </p>
+      <p><span class="tk">TK_STORY_WHEELS</span> The fitment findings for each package. Full lock, highway manners, what rubbed.</p>
+
+      <h3>The bottom line</h3>
+      <p>
+        You can build a truck you are proud of in a driveway in one weekend. What you cannot do is start
+        Saturday morning with unopened boxes and no plan. (<span class="tk">TK_STORY_CLOSE</span>)
+      </p>
+      <p>
+        Every part on this page is on Custom Offsets with fitment proof from real owner builds, so you can
+        see it on your exact year and trim before you spend a dollar. If you want a second opinion on offsets
+        before you order, call the team at <a href="tel:9202210110">920-221-0110</a>.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="sec faqsec" id="faq">
+  <div class="wrap">
+    <div class="rv">
+      <div class="kicker">Real questions. Real answers.</div>
+      <h2 class="display">Before you start.</h2>
+      <p class="lede" style="margin-top:20px">Everything owners ask before they give up a weekend to their own driveway.</p>
+    </div>
+    <div class="faq rv" id="faqList">
+      <div class="q">
+        <button class="q__btn" aria-expanded="false"><span class="q__t">Can a first timer really do all of this in two days?</span><span class="q__ic" aria-hidden="true"></span></button>
+        <div class="q__body"><p><span class="tk">TK_FAQ_1</span> Answer honestly, including what took longer than expected and which single job a beginner should hand off.</p></div>
+      </div>
+      <div class="q">
+        <button class="q__btn" aria-expanded="false"><span class="q__t">What is offset, and why does everyone keep talking about it?</span><span class="q__ic" aria-hidden="true"></span></button>
+        <div class="q__body"><p>Offset is the distance between the wheel's mounting surface and the middle of the wheel, measured in millimeters. A high positive number pulls the wheel inward, toward the suspension. A negative number pushes it outward, toward the fender. On this build the 20x9 sits at +1mm, the 22x9.5 at +44mm, and the 22x12 at -51mm, which is why the last one looks so much wider even though the truck never changed.</p><p>Backspacing measures the same thing in inches from the back face of the wheel, and most people find it easier to picture: roughly 5in on the 20x9, 7in on the 22x9.5, and 4.5in on the 22x12.</p></div>
+      </div>
+      <div class="q">
+        <button class="q__btn" aria-expanded="false"><span class="q__t">Do I need an alignment after a 2in lift and new offsets?</span><span class="q__ic" aria-hidden="true"></span></button>
+        <div class="q__body"><p>Yes, every time. Lifting the truck changes camber and toe, and a new offset changes the scrub radius on top of it. Drive gently to the shop and get it aligned before you put real miles on a new set of tires. Budget it into your Monday, not your weekend.</p></div>
+      </div>
+      <div class="q">
+        <button class="q__btn" aria-expanded="false"><span class="q__t">Which of the three packages rubs, and how much trimming does it take?</span><span class="q__ic" aria-hidden="true"></span></button>
+        <div class="q__body"><p><span class="tk">TK_FAQ_4</span> Give the real answer per package: 20x9 at +1mm on a 34in tire, 22x9.5 at +44mm on 35s, and 22x12 at -51mm on 33s, including what happens at full lock and over a driveway apron.</p></div>
+      </div>
+      <div class="q">
+        <button class="q__btn" aria-expanded="false"><span class="q__t">What is the install difficulty of each part?</span><span class="q__ic" aria-hidden="true"></span></button>
+        <div class="q__body"><p><span class="tk">TK_FAQ_5</span> Rate each one out of ten. Suspension, lighting, intake, exhaust, Flashcal, seat covers, and the wheel swaps.</p></div>
+      </div>
+      <div class="q">
+        <button class="q__btn" aria-expanded="false"><span class="q__t">Does this parts list only work on an F-150?</span><span class="q__ic" aria-hidden="true"></span></button>
+        <div class="q__body"><p>No. The exact part numbers here are for a 2018 F-150 5.0L, but the recipe travels. Suspension, wheels and tires, lighting, intake, exhaust, and a tuner is the same list on almost any half ton. Run your own year, make, model, and trim through the fitment tool and you will get the same groups with different part numbers.</p></div>
+      </div>
+      <div class="q">
+        <button class="q__btn" aria-expanded="false"><span class="q__t">What order should I install everything in?</span><span class="q__ic" aria-hidden="true"></span></button>
+        <div class="q__body"><p>Suspension first, because ride height decides your wheel and tire fitment. Lighting second, since it is fast and gives you a visible win early. Performance third. Wheels and tires last, so you are setting final fitment against the finished ride height. Interior work fills the gaps while you are waiting on something else.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== BLOGS ===================== -->
+<section class="sec blogs" id="blogs">
+  <div class="wrap">
+    <div class="rv">
+      <div class="kicker">Latest from the garage</div>
+      <h2 class="display">Build knowledge.<br>Straight from Custom Offsets.</h2>
+      <p class="lede" style="margin-top:20px">
+        Fresh build guides, brand breakdowns, and behind the scenes from the Custom Offsets team.
+        No filler. Real fitment, real builds, real opinions.
+      </p>
+    </div>
+    <div class="bgrid">
+      <a class="bcard rv" href="https://www.customwheeloffset.com/" target="_blank" rel="noopener">
+        <div class="bcard__img"><img src="assets/blog-01.jpg" alt="Blog thumbnail one"></div>
+        <div class="bcard__body">
+          <div class="bcard__cat"><span class="tk">TK_CATEGORY</span></div>
+          <div class="bcard__t"><span class="tk">TK_BLOG_TITLE_1</span></div>
+          <div class="bcard__m"><span class="tk">TK_AUTHOR</span> . <span class="tk">TK_DATE</span></div>
+        </div>
+      </a>
+      <a class="bcard rv" href="https://www.customwheeloffset.com/" target="_blank" rel="noopener">
+        <div class="bcard__img"><img src="assets/blog-02.jpg" alt="Blog thumbnail two"></div>
+        <div class="bcard__body">
+          <div class="bcard__cat"><span class="tk">TK_CATEGORY</span></div>
+          <div class="bcard__t"><span class="tk">TK_BLOG_TITLE_2</span></div>
+          <div class="bcard__m"><span class="tk">TK_AUTHOR</span> . <span class="tk">TK_DATE</span></div>
+        </div>
+      </a>
+      <a class="bcard rv" href="https://www.customwheeloffset.com/" target="_blank" rel="noopener">
+        <div class="bcard__img"><img src="assets/blog-03.jpg" alt="Blog thumbnail three"></div>
+        <div class="bcard__body">
+          <div class="bcard__cat"><span class="tk">TK_CATEGORY</span></div>
+          <div class="bcard__t"><span class="tk">TK_BLOG_TITLE_3</span></div>
+          <div class="bcard__m"><span class="tk">TK_AUTHOR</span> . <span class="tk">TK_DATE</span></div>
+        </div>
+      </a>
+    </div>
+    <div style="margin-top:30px">
+      <a class="btn btn--ghost" href="https://www.customwheeloffset.com/" target="_blank" rel="noopener">See all blogs</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== STATS ===================== -->
+<section class="stats">
+  <div class="stats__in">
+    <div class="st"><div class="st__v">1.25M+</div><div class="st__k label">Fitment photos</div></div>
+    <div class="st"><div class="st__v">1M+</div><div class="st__k label">Orders fulfilled</div></div>
+    <div class="st"><div class="st__v">4.9&#9733;</div><div class="st__k label">28,000+ verified reviews</div></div>
+    <div class="st"><div class="st__v"><a href="tel:9202210110">920-221-0110</a></div><div class="st__k label">Expert support</div></div>
+  </div>
+</section>
+
+<!-- ===================== NEXT STEP ===================== -->
+<section class="sec next">
+  <div class="wrap next__in">
+    <div class="kicker kicker--p kicker--c">Your driveway is next</div>
+    <h2 class="display">Start your build.</h2>
+    <p class="lede" style="text-align:center">
+      Every wheel, tire, and part on this page is guaranteed to fit before you check out. Run your truck
+      through the fitment gallery, see it on your exact year and trim, and order the whole build in one shot.
+    </p>
+    <div class="trust">Build it right. <span>See it first.</span> Trust the fit.</div>
+    <div class="next__row">
+      <a class="btn btn--primary" href="https://www.customwheeloffset.com/" target="_blank" rel="noopener">Shop wheels and tires</a>
+      <a class="btn btn--ghost" href="#swaps">Back to the swaps</a>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <small>
+      &copy; 2026 Custom Offsets . <a href="https://www.customwheeloffset.com/" target="_blank" rel="noopener">customwheeloffset.com</a> . <a href="tel:9202210110">920-221-0110</a><br>
+      All product names and trademarks are the property of their respective owners. Pricing shown is approximate and subject to change. Financing through Affirm subject to approval. Katapult is a lease-to-own option with its own terms.
+    </small>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  var VEHICLE = "?vehicle_type=Truck&year=2018&make=Ford&model=F-150&trim=Lariat&drive=4WD&modification=Minor+Plastic+Trimming&rubbing=No+rubbing+or+scrubbing&suspension=Leveling+Kit";
+
+  /* ============================================================
+     SWAP DATA
+     Wheel offsets and sizes are taken straight off the Custom
+     Offsets package pages. Backspacing is derived with the
+     standard formula: (marketed width + 1in) / 2 + offset in
+     inches. Overall diameter is the tire's own spec, except the
+     metric LT295/60R20, which computes to about 33.9in.
+     ============================================================ */
+  var SWAPS = {
+
+    wheels: {
+      badge: "Setup",
+      scale: { min: 60, max: -60, showZero: true },   // flipped: tucked on the left, negative sticks out on the right
+      items: [
+        {
+          name:"The Daily Driver",
+          prod:"Fuel Rebel 6", size:"20x9",
+          feature:["Tire","BFGoodrich All-Terrain T/A KO3"],
+          blurb:"The narrowest wheel and the most sidewall of the three, which is why it rides the best. This is the package you pick if the truck still tows, hauls, or commutes.",
+          chips:[["Backspacing","About 5in"],["Tire size","LT295/60R20"],["Diameter","About 34in"]],
+          price:"$3,691.32",
+          scaleValue:1, scaleLabel:"+1mm",
+          meters:[["Stance",48],["Rub risk",26],["Daily comfort",92]],
+          note:"TK_NOTE_20x9. The easiest of the three to bolt up, and why that matters when you only have one weekend.",
+          cta:"Build the 20x9 package",
+          link:"https://www.customwheeloffset.com/buy-wheel-offset2/D68020908950/BFG44461/fuel-rebel-6-20x9-1-bfgoodrich-all-terrain-t-a-ko3-lt295-60r20" + VEHICLE
+        },
+        {
+          name:"The 35in Look",
+          prod:"Factory Reproductions FR52", size:"22x9.5",
+          feature:["Tire","Nitto Trail Grappler"],
+          blurb:"The tallest tire on the most conservative wheel. At about 7in of backspacing the 35s fill the openings without hanging past the body. Looks built from fifty feet away, still parks in a normal garage.",
+          chips:[["Backspacing","About 7in"],["Tire size","35x12.50R22LT"],["Diameter","35in"]],
+          price:"$4,291.04",
+          scaleValue:44, scaleLabel:"+44mm",
+          meters:[["Stance",76],["Rub risk",58],["Daily comfort",74]],
+          note:"TK_NOTE_22x95. What the 35s asked for during the swap and how long the set took.",
+          cta:"Build the 22x9.5 package",
+          link:"https://www.customwheeloffset.com/buy-wheel-offset2/52295443601/205610/factory-reproductions-fr52-22x95-44-nitto-trail-grappler-35x1250r22lt" + VEHICLE
+        },
+        {
+          name:"Max Poke",
+          prod:"ARKON OFF-ROAD Caesar", size:"22x12",
+          feature:["Tire","Kelfire DMR R/T"],
+          blurb:"Twelve inches wide with the wheel sitting out at the edge of the fender. It changes the silhouette of the truck and asks the most from your fenders and your alignment.",
+          chips:[["Backspacing","About 4.5in"],["Tire size","33x12.50R22LT"],["Diameter","33in"]],
+          price:"$3,476.16",
+          scaleValue:-51, scaleLabel:"-51mm",
+          meters:[["Stance",96],["Rub risk",88],["Daily comfort",54]],
+          note:"TK_NOTE_22x12. The full lock check, what rubbed, and what came off to make it sit right.",
+          cta:"Build the 22x12 package",
+          link:"https://www.customwheeloffset.com/buy-wheel-offset2/K14922208945/1912002333/arkon-off-road-caesar-22x12-51-kelfire-dmr-rt-33x1250r22lt" + VEHICLE
+        }
+      ]
+    },
+
+    /* Option 01 is what actually went on the truck.
+       Options 02 and 03 are placeholders pending real details. */
+    susp: {
+      badge: "Option",
+      lift: { max: 6 },
+      items: [
+        {
+          name:"Vertex 2.5 RR",
+          prod:"Rough Country", size:"2in lift",
+          feature:["Fits","Ford F-150 4WD, 2014 to 2026"],
+          blurb:"Two real inches up front and real damping with no cutting, welding, or spring press, which is the only reason a suspension job belongs on a driveway weekend at all.",
+          chips:[["Shock body","2.5in RR"],["Install","Bolt on"],["Cutting","None"]],
+          price:"$1,299.95",
+          liftValue:2, liftLabel:"2in",
+          meters:[["Ride quality",84],["Install difficulty",62],["Driveway friendly",88]],
+          note:"TK_NOTE_SUSP_1. What the install actually took, the torque specs that mattered, and where a first timer will slow down.",
+          cta:"Shop Rough Country suspension",
+          link:"https://www.customwheeloffset.com/"
+        },
+        {
+          name:"TK_OPTION_2",
+          prod:"TK_SUSPENSION_2", size:"TK",
+          feature:["Fits","TK"],
+          blurb:"TK_SUSPENSION_BLURB_2. Details for the second option are coming. Drop in the product name, lift height, fitment range, and the reason a driveway builder would pick this route over the other two.",
+          chips:[["Shock body","TK"],["Install","TK"],["Cutting","TK"]],
+          price:"$TK",
+          liftValue:0, liftLabel:"TK",
+          meters:[["Ride quality",0],["Install difficulty",0],["Driveway friendly",0]],
+          note:"TK_NOTE_SUSP_2. Install notes for this option.",
+          cta:"Shop suspension",
+          link:"https://www.customwheeloffset.com/"
+        },
+        {
+          name:"TK_OPTION_3",
+          prod:"TK_SUSPENSION_3", size:"TK",
+          feature:["Fits","TK"],
+          blurb:"TK_SUSPENSION_BLURB_3. Details for the third option are coming. Drop in the product name, lift height, fitment range, and the reason a driveway builder would pick this route over the other two.",
+          chips:[["Shock body","TK"],["Install","TK"],["Cutting","TK"]],
+          price:"$TK",
+          liftValue:0, liftLabel:"TK",
+          meters:[["Ride quality",0],["Install difficulty",0],["Driveway friendly",0]],
+          note:"TK_NOTE_SUSP_3. Install notes for this option.",
+          cta:"Shop suspension",
+          link:"https://www.customwheeloffset.com/"
+        }
+      ]
+    }
+  };
+
+  function tkwrap(v){ return /^(TK|\$TK)/.test(String(v)) ? '<span class="tk">' + v + '</span>' : v; }
+
+  function initSwap(root, cfg){
+    var q = function(role){ return root.querySelector('[data-role="' + role + '"]'); };
+    var tabs = [].slice.call(root.querySelectorAll('.pick'));
+    var imgs = [].slice.call(root.querySelectorAll('.stage__vis img'));
+    var panel = root.querySelector('.stage');
+    var key = root.dataset.swap;
+    var current = -1;
+    var isLift = !!cfg.lift;
+
+    if (!isLift) {
+      var s = cfg.scale;
+      if (s.showZero) q('zero').style.left = ((0 - s.min) / (s.max - s.min)) * 100 + '%';
+      else q('zero').style.display = 'none';
+    } else {
+      // build the vertical scale labels and gridlines once
+      var scaleEl = q('liftScale'), gridEl = q('liftGrid'), mx = cfg.lift.max;
+      var sHtml = '', gHtml = '';
+      for (var n = 0; n <= mx; n++) {
+        var p = (n / mx) * 100;
+        sHtml += '<span style="bottom:' + p + '%">' + n + 'in</span>';
+        if (n > 0) gHtml += '<i style="bottom:' + p + '%"></i>';
+      }
+      scaleEl.innerHTML = sHtml;
+      gridEl.innerHTML = gHtml;
+    }
+
+    function render(i, focus){
+      if (i === current) return;
+      current = i;
+      var d = cfg.items[i];
+
+      tabs.forEach(function(t, n){
+        var on = n === i;
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+        t.tabIndex = on ? 0 : -1;
+      });
+      if (focus) tabs[i].focus();
+      imgs.forEach(function(im, n){ im.classList.toggle('on', n === i); });
+      panel.setAttribute('aria-labelledby', key + '-tab-' + i);
+
+      q('badge').textContent = cfg.badge + ' 0' + (i + 1) + ' of 03';
+      q('eyebrow').textContent = cfg.badge + ' 0' + (i + 1);
+      q('name').innerHTML = tkwrap(d.name);
+      q('prod').innerHTML = tkwrap(d.prod) + ' <em>' + tkwrap(d.size) + '</em>';
+      q('featureK').textContent = d.feature[0];
+      q('featureV').innerHTML = tkwrap(d.feature[1]);
+      q('blurb').textContent = d.blurb;
+      q('note').textContent = d.note;
+      q('cta').href = d.link;
+      q('cta').textContent = d.cta;
+      q('price').innerHTML = tkwrap(d.price);
+      q('chips').innerHTML = d.chips.map(function(r){
+        return '<div class="chip"><div class="chip__k">' + r[0] + '</div><div class="chip__v">' + tkwrap(r[1]) + '</div></div>';
+      }).join('');
+
+      if (isLift) {
+        var pctv = (d.liftValue / cfg.lift.max) * 100;
+        q('liftFill').style.height = pctv + '%';
+        q('liftMark').style.bottom = pctv + '%';
+        q('liftChip').style.bottom = pctv + '%';
+        q('liftChip').textContent = d.liftLabel;
+      } else {
+        var sc = cfg.scale;
+        q('scaleVal').innerHTML = tkwrap(d.scaleLabel);
+        q('pin').style.left = 'calc(' + ((d.scaleValue - sc.min) / (sc.max - sc.min)) * 100 + '% - 2.5px)';
+      }
+
+      var box = q('meters');
+      box.innerHTML = '';
+      d.meters.forEach(function(m){
+        var e = document.createElement('div');
+        e.innerHTML = '<div class="meter__top"><span class="label">' + m[0] + '</span><span class="meter__v">' + (m[1] > 0 ? m[1] + '/100' : 'TK') + '</span></div><div class="meter__bar"><div class="meter__fill"></div></div>';
+        box.appendChild(e);
+        var fill = e.querySelector('.meter__fill');
+        requestAnimationFrame(function(){ requestAnimationFrame(function(){ fill.style.width = m[1] + '%'; }); });
+      });
+    }
+
+    tabs.forEach(function(t){ t.addEventListener('click', function(){ render(parseInt(t.dataset.i, 10), false); }); });
+    root.querySelector('.picker').addEventListener('keydown', function(e){
+      var i = current, n = tabs.length;
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') { e.preventDefault(); render((i + 1) % n, true); }
+      else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); render((i - 1 + n) % n, true); }
+      else if (e.key === 'Home') { e.preventDefault(); render(0, true); }
+      else if (e.key === 'End') { e.preventDefault(); render(n - 1, true); }
+    });
+    render(0, false);
+    return { replay: function(){ var c = current; current = -1; render(c, false); } };
+  }
+
+  var instances = {};
+  [].slice.call(document.querySelectorAll('[data-swap]')).forEach(function(root){
+    instances[root.dataset.swap] = initSwap(root, SWAPS[root.dataset.swap]);
+  });
+
+  /* ============ MODE TOGGLE . wheels vs suspension ============ */
+  var modes = [].slice.call(document.querySelectorAll('.mode'));
+  function setMode(key, focus){
+    modes.forEach(function(m){
+      var on = m.dataset.mode === key;
+      m.setAttribute('aria-selected', on ? 'true' : 'false');
+      m.tabIndex = on ? 0 : -1;
+      m.querySelector('.mode__go').textContent = on ? 'Viewing this' : 'Switch to this';
+      var box = document.getElementById('box-' + m.dataset.mode);
+      box.hidden = !on;
+      if (on && instances[m.dataset.mode]) instances[m.dataset.mode].replay();
+      if (on && focus) m.focus();
+    });
+  }
+  modes.forEach(function(m){ m.addEventListener('click', function(){ setMode(m.dataset.mode, false); }); });
+  document.querySelector('.modes').addEventListener('keydown', function(e){
+    var i = modes.findIndex(function(m){ return m.getAttribute('aria-selected') === 'true'; });
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') { e.preventDefault(); setMode(modes[(i + 1) % modes.length].dataset.mode, true); }
+    else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); setMode(modes[(i - 1 + modes.length) % modes.length].dataset.mode, true); }
+  });
+
+  var el = function(id){ return document.getElementById(id); };
+
+  /* ============ FINANCING MODAL ============ */
+  var finModal = el('finModal'), finOpen = el('finOpen'), lastFocus = null;
+  function openFin(){
+    lastFocus = document.activeElement;
+    finModal.classList.add('on');
+    finModal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    var x = finModal.querySelector('.modal__x');
+    if (x) x.focus();
+  }
+  function closeFin(){
+    finModal.classList.remove('on');
+    finModal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    if (lastFocus) lastFocus.focus();
+  }
+  if (finOpen) finOpen.addEventListener('click', openFin);
+  [].slice.call(finModal.querySelectorAll('[data-close]')).forEach(function(n){
+    n.addEventListener('click', closeFin);
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && finModal.classList.contains('on')) closeFin();
+  });
+
+  /* ============ TOOL CHECKLIST ============ */
+  var tis = [].slice.call(document.querySelectorAll('.ti'));
+  function syncClip(){
+    var n = tis.filter(function(t){ return t.getAttribute('aria-pressed') === 'true'; }).length;
+    el('clipN').textContent = n;
+    el('clipFill').style.width = (n / tis.length) * 100 + '%';
+    el('clipDone').classList.toggle('on', n === tis.length);
+  }
+  tis.forEach(function(t){
+    t.addEventListener('click', function(){
+      t.setAttribute('aria-pressed', t.getAttribute('aria-pressed') === 'true' ? 'false' : 'true');
+      syncClip();
+    });
+  });
+  el('clipReset').addEventListener('click', function(){
+    tis.forEach(function(t){ t.setAttribute('aria-pressed', 'false'); });
+    syncClip();
+  });
+  syncClip();
+
+  /* ============ PARTS CATEGORY TABS ============ */
+  var ptabs = [].slice.call(document.querySelectorAll('.ptab'));
+  var pcards = [].slice.call(document.querySelectorAll('.pcard'));
+  function matches(cat, c){
+    var k = c.dataset.cat;
+    if (cat === 'all') return k !== 'pkg';
+    if (cat === 'wt') return k === 'pkg' || k === 'wheel' || k === 'tire';
+    return k === cat;
+  }
+  /* 3 by 3 pages, nine cards at a time */
+  var PER_PAGE = 6;
+  var pgCat = 'all', pgPage = 0, pgPool = [];
+  var pager = el('pager'), pgDots = el('pgDots');
+
+  function drawPage(){
+    var total = Math.max(1, Math.ceil(pgPool.length / PER_PAGE));
+    if (pgPage > total - 1) pgPage = total - 1;
+    if (pgPage < 0) pgPage = 0;
+    var start = pgPage * PER_PAGE, end = start + PER_PAGE;
+
+    pcards.forEach(function(c){ c.style.display = 'none'; });
+    pgPool.slice(start, end).forEach(function(c){ c.style.display = ''; c.classList.add('in'); });
+
+    var single = total < 2;
+    pager.hidden = single;
+    el('pgPrev').hidden = single;
+    el('pgNext').hidden = single;
+    el('pgNow').textContent = pgPage + 1;
+    el('pgTotal').textContent = total;
+    el('pgCount').textContent = '. ' + pgPool.length + (pgPool.length === 1 ? ' part' : ' parts');
+    el('pgPrev').disabled = pgPage === 0;
+    el('pgNext').disabled = pgPage >= total - 1;
+
+    var dots = '';
+    for (var i = 0; i < total; i++) {
+      dots += '<button type="button" data-p="' + i + '" aria-current="' + (i === pgPage ? 'true' : 'false') +
+              '" aria-label="Go to page ' + (i + 1) + '"></button>';
+    }
+    pgDots.innerHTML = dots;
+  }
+
+  function setCat(cat){
+    pgCat = cat; pgPage = 0;
+    pgPool = pcards.filter(function(c){ return matches(cat, c); });
+    drawPage();
+  }
+
+  ptabs.forEach(function(t){
+    t.addEventListener('click', function(){
+      ptabs.forEach(function(x){ x.setAttribute('aria-selected', x === t ? 'true' : 'false'); });
+      setCat(t.dataset.cat);
+    });
+  });
+  // keep the grid in view when paging, so the reader is not dumped further down the page
+  function keepGridInView(){
+    var g = el('pgrid').getBoundingClientRect();
+    if (g.top < 80) window.scrollTo({ top: el('pgrid').offsetTop - 90, behavior: 'smooth' });
+  }
+  el('pgPrev').addEventListener('click', function(){ pgPage--; drawPage(); keepGridInView(); });
+  el('pgNext').addEventListener('click', function(){ pgPage++; drawPage(); keepGridInView(); });
+  pgDots.addEventListener('click', function(e){
+    var b = e.target.closest('button[data-p]');
+    if (b) { pgPage = parseInt(b.dataset.p, 10); drawPage(); keepGridInView(); }
+  });
+  setCat('all');
+
+  /* ============ FAQ ACCORDION ============ */
+  var qbtns = [].slice.call(document.querySelectorAll('.q__btn'));
+  qbtns.forEach(function(btn){
+    var body = btn.nextElementSibling;
+    btn.addEventListener('click', function(){
+      var open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', open ? 'false' : 'true');
+      body.style.maxHeight = open ? '0px' : body.scrollHeight + 'px';
+    });
+  });
+  window.addEventListener('resize', function(){
+    qbtns.forEach(function(btn){
+      if (btn.getAttribute('aria-expanded') === 'true') btn.nextElementSibling.style.maxHeight = btn.nextElementSibling.scrollHeight + 'px';
+    });
+  });
+
+  /* ============ NAV AND JUMP SCROLLSPY + PROGRESS ============ */
+  var navLinks = [].slice.call(document.querySelectorAll('.nav__links a'));
+  var jumpLinks = [].slice.call(document.querySelectorAll('.jump__in a'));
+  var secs = navLinks.map(function(a){ return document.querySelector(a.getAttribute('href')); });
+  var bar = el('progress');
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop;
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (h > 0 ? (y / h) * 100 : 0) + '%';
+    var mark = y + 140, best = -1;
+    secs.forEach(function(sec, n){ if (sec && sec.offsetTop <= mark) best = n; });
+    navLinks.forEach(function(a, n){ a.classList.toggle('on', n === best); });
+    jumpLinks.forEach(function(a, n){ a.classList.toggle('on', n === best); });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  onScroll();
+
+  /* ============ REVEAL ============ */
+  var rv = [].slice.call(document.querySelectorAll('.rv'));
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, { rootMargin: '0px 0px -70px 0px', threshold: 0.05 });
+    rv.forEach(function(n){ io.observe(n); });
+  } else {
+    rv.forEach(function(n){ n.classList.add('in'); });
+  }
+})();
+</script>
+</body>
+</html>
