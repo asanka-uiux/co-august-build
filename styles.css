@@ -495,7 +495,7 @@ h1.display .l2{display:block;color:var(--red-hot)}
 .q__btn[aria-expanded="true"] .q__ic::before,.q__btn[aria-expanded="true"] .q__ic::after{background:#fff}
 .q__btn[aria-expanded="true"] .q__ic::after{transform:translate(-50%,-50%) rotate(90deg)}
 .q__body{overflow:hidden;max-height:0;transition:max-height .38s cubic-bezier(.2,.7,.3,1)}
-.q__body p{padding:0 0 24px;max-width:74ch;color:var(--muted);font-size:.95rem}
+.q__body p{padding:0 0 24px;max-width:100%;color:var(--muted);font-size:.95rem}
 
 /* ---------- blogs ---------- */
 .blogs{background:var(--ink);border-top:1px solid var(--line-2)}
