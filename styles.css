@@ -621,6 +621,15 @@ h1.display .l2{display:block;color:var(--red-hot)}
 
   /* no rubber-band scroll past the footer */
   html,body{overscroll-behavior-y:none}
+
+  /* option picker (wheels/tires + suspension tabs): row of 3 instead
+     of stacked, matching the >=701px layout but tightened to fit a
+     phone-width column */
+  .picker{grid-template-columns:repeat(3,1fr)}
+  .pick{padding:10px 6px;border-right:1px solid var(--line);border-bottom:0}
+  .pick__n{font-size:.58rem;letter-spacing:.03em}
+  .pick__name{font-size:1.2rem;margin:3px 0 2px}
+  .pick__size{font-size:11px}
 }
 
 /* ---------- reveal ---------- */
