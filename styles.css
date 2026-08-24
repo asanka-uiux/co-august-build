@@ -566,7 +566,7 @@ h1.display .l2{display:block;color:var(--red-hot)}
   .hero__sub{font-size:.80rem}
   .kicker{justify-content:center}
   h2.display,.lede,.byline{text-align:center}
-  .lede{margin-left:auto;margin-right:auto}
+  .lede{margin-left:auto;margin-right:auto;font-size:clamp(.8rem,1.5vw,1.18rem)}
   .ptabs{flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
   .ptabs::-webkit-scrollbar{display:none}
   .ptab{flex:none;white-space:nowrap}
@@ -591,7 +591,7 @@ h1.display .l2{display:block;color:var(--red-hot)}
   .pcard__p{display:none}
   .pcard__sku{font-size:.68rem;margin-top:8px;padding-top:8px}
   .pcard__price{font-size:1.28rem;margin-top:6px}
-  .pcard__acts{margin-top:10px;gap:6px}
+  .pcard__acts{margin-top:auto;padding-top:10px;gap:6px}
   .pcard__acts a{font-size:.56rem;padding:9px 6px;letter-spacing:.07em}
   .pcard__flag{font-size:.5rem;padding:4px 7px;top:8px;left:8px}
 
