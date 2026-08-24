@@ -542,6 +542,29 @@ h1.display .l2{display:block;color:var(--red-hot)}
 .foot a{color:var(--muted);text-decoration:none}
 .foot a:hover{color:var(--red-hot)}
 
+/* ============================================================
+   MOBILE REFINEMENTS (<=680px)
+   Bigger base type scale, taller full-width CTA buttons, and
+   centered section intros (kicker + heading + lede/byline) for
+   a more comfortable small-screen read. Card grids, the story
+   article body, and FAQ answers keep their left alignment -
+   centering long-form text hurts readability, it doesn't help.
+   ============================================================ */
+@media(max-width:680px){
+  html{font-size:17.5px}
+  body{font-size:18px}
+
+  .btn{padding:17px 24px;font-size:.82rem}
+  .hero__actions,.next__row{flex-direction:column;align-items:center}
+  .hero__actions .btn,.next__row .btn,.finbanner__btn{width:100%}
+
+  .hero__in .wrap{text-align:center}
+  .kicker{justify-content:center}
+  h2.display,.lede,.byline{text-align:center}
+  .lede{margin-left:auto;margin-right:auto}
+  .ptabs{justify-content:center}
+}
+
 /* ---------- reveal ---------- */
 .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.3,1)}
 .rv.in{opacity:1;transform:none}
