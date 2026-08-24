@@ -30,10 +30,10 @@ button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit
 h1.display{font-size:clamp(2.4rem,5.6vw,5rem)}
 h2.display{font-size:clamp(2.1rem,4.4vw,3.6rem)}
 .kicker{font-family:'Oswald',sans-serif;font-weight:600;font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;color:var(--red-hot);display:flex;align-items:center;gap:12px;margin-bottom:18px}
-.kicker::before{content:"";width:32px;height:2px;background:var(--red);flex:none}
+.kicker::before{display:none}
 .kicker--c{justify-content:center}
 .kicker--p::before{display:none}
-.lede{font-size:clamp(1.02rem,1.5vw,1.18rem);color:var(--muted);max-width:68ch}
+.lede{font-size:clamp(1.02rem,1.5vw,1.18rem);color:var(--muted);max-width:100%}
 .num{font-family:'Rajdhani',sans-serif;font-weight:700;font-variant-numeric:tabular-nums}
 .label{font-family:'Oswald',sans-serif;font-weight:500;font-size:.67rem;letter-spacing:.2em;text-transform:uppercase;color:var(--dim)}
 .red{color:var(--red-hot)}
@@ -539,8 +539,8 @@ h1.display .l2{display:block;color:var(--red-hot)}
 .next__row{display:flex;gap:13px;justify-content:center;flex-wrap:wrap;margin-top:30px}
 
 /* ---------- footer ---------- */
-.foot{border-top:1px solid var(--line-2);padding:38px 0;background:var(--panel)}
-.foot small{color:var(--dim);font-size:.79rem;max-width:78ch;display:block}
+.foot{border-top:1px solid var(--line-2);padding:38px 0;background:var(--panel);text-align:center}
+.foot small{color:var(--dim);font-size:.79rem;max-width:100%;display:block;margin:0 auto}
 .foot a{color:var(--muted);text-decoration:none}
 .foot a:hover{color:var(--red-hot)}
 
