@@ -12,7 +12,7 @@
   --red:#CE1126; --red-hot:#FF2036; --red-deep:#8E0B19;
   --ink:#0A0A0B; --panel:#111114; --panel-2:#17171C; --panel-3:#1E1E24;
   --line:rgba(255,255,255,.10); --line-2:rgba(255,255,255,.06);
-  --white:#FFF; --text:#E7E7EA; --muted:#9A9AA4; --dim:#6E6E78; --green:#5FD08A;
+  --white:#FFF; --text:#E7E7EA; --muted:#9A9AA4; --dim:#9A9A9A; --green:#5FD08A;
   --maxw:1240px; --wide:1520px; --r:4px; --navh:66px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
