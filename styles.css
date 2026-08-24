@@ -473,6 +473,8 @@ h1.display .l2{display:block;color:var(--red-hot)}
 .playmark::after{content:"";width:0;height:0;border-left:24px solid #fff;border-top:15px solid transparent;border-bottom:15px solid transparent;margin-left:6px}
 
 /* ---------- story ---------- */
+#story{position:relative;overflow:hidden}
+#story .wrap{position:relative;z-index:1}
 .byline{font-family:'Oswald',sans-serif;font-size:.68rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);margin-top:16px}
 .prose{max-width:74ch;margin-top:36px}
 .prose h3{font-family:'Bebas Neue',sans-serif;font-size:1.65rem;color:var(--white);letter-spacing:.04em;margin:38px 0 12px;line-height:1.1}
@@ -481,6 +483,18 @@ h1.display .l2{display:block;color:var(--red-hot)}
 .prose p strong{color:var(--text);font-weight:600}
 .prose a{color:var(--red-hot);text-decoration:none;border-bottom:1px solid rgba(255,32,54,.4)}
 .prose a:hover{color:#fff;border-color:#fff}
+
+@media(min-width:1001px){
+  #story::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    z-index:0;
+    background:
+      linear-gradient(to right, var(--ink) 0%, var(--ink) 46%, rgba(10,10,11,.82) 60%, rgba(10,10,11,.55) 100%),
+      url('assets/hero-driveway.jpg') no-repeat right center/cover;
+  }
+}
 
 /* ---------- faq ---------- */
 .faqsec{background:var(--panel);border-top:1px solid var(--line-2)}
