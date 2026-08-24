@@ -112,7 +112,7 @@ h1.display .l2{display:block;color:var(--red-hot)}
 }
 
 /* ---------- jump band ---------- */
-.jump{background:var(--ink);border-bottom:1px solid var(--line-2)}
+.jump{display:none}
 .jump__in{max-width:var(--wide);margin:0 auto;padding:22px 34px;display:flex;flex-wrap:wrap;gap:8px 22px;align-items:baseline;justify-content:flex-start}
 .jump__in a{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.12rem,1.62vw,1.5rem);letter-spacing:.055em;color:var(--dim);text-decoration:none;transition:color .2s;line-height:1.2;white-space:nowrap}
 .jump__in a:hover,.jump__in a.on{color:var(--white)}
