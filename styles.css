@@ -68,7 +68,7 @@ h2.display{font-size:clamp(2.1rem,4.4vw,3.6rem)}
 }
 
 /* ---------- hero ---------- */
-.hero{position:relative;min-height:min(calc(100svh - var(--navh)),760px);display:flex;align-items:flex-end;overflow:hidden;margin-top:var(--navh)}
+.hero{position:relative;min-height:min(calc(100svh - var(--navh)),760px);display:flex;align-items:center;overflow:hidden;margin-top:var(--navh)}
 .hero__bg{position:absolute;inset:0;z-index:0}
 .hero__bg img{width:100%;height:100%;object-fit:cover;object-position:center 66%}
 .hero__bg::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,var(--ink) 3%,rgba(10,10,11,.78) 34%,rgba(10,10,11,.28) 72%,rgba(10,10,11,.42) 100%),linear-gradient(to right,rgba(10,10,11,.82),rgba(10,10,11,.06) 58%)}
