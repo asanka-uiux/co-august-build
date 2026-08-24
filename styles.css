@@ -91,8 +91,11 @@ h1.display .l2{display:block;color:var(--red-hot)}
 /* mobile base: single column, one row per item */
 .keyspecs{background:var(--panel);border-top:1px solid var(--line-2);border-bottom:1px solid var(--line-2)}
 .keyspecs__in{max-width:var(--wide);margin:0 auto;padding:0 34px;display:grid;grid-template-columns:1fr}
-.ks{padding:15px 0;border-right:0;border-bottom:1px solid var(--line-2);min-width:0}
+.ks{display:flex;gap:12px;align-items:flex-start;padding:15px 0;border-right:0;border-bottom:1px solid var(--line-2);min-width:0}
 .ks:last-child{border-right:0;border-bottom:0}
+.ks__icon{flex:none;width:32px;height:32px;border-radius:7px;background:rgba(206,17,38,.14);color:#FF6B76;display:flex;align-items:center;justify-content:center}
+.ks__icon svg{width:18px;height:18px}
+.ks__text{min-width:0;flex:1}
 .ks__l{font-family:'Oswald',sans-serif;font-weight:500;font-size:.61rem;letter-spacing:.19em;text-transform:uppercase;color:var(--dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .ks__a{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.02rem,1.34vw,1.34rem);color:var(--white);letter-spacing:.028em;line-height:1.18;margin-top:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .ks__b{font-family:'Rajdhani',sans-serif;font-weight:600;font-size:clamp(.76rem,.9vw,.88rem);color:var(--muted);margin-top:3px;letter-spacing:.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -435,7 +438,7 @@ h1.display .l2{display:block;color:var(--red-hot)}
 .carousel{display:grid;grid-template-columns:1fr;gap:0;align-items:center;margin-top:34px}
 .carousel__arrow{
   height:52px;width:52px;border:1px solid var(--line);border-radius:6px;background:var(--panel-2);
-  color:var(--text);display:flex;align-items:center;justify-content:center;transition:all .2s;
+  color:var(--text);display:none;align-items:center;justify-content:center;transition:all .2s;
 }
 .carousel__arrow:hover:not(:disabled){border-color:var(--red);background:var(--red);color:#fff;transform:translateY(-2px);box-shadow:0 10px 26px rgba(206,17,38,.28)}
 .carousel__arrow:disabled{opacity:.22;cursor:default}
@@ -559,10 +562,53 @@ h1.display .l2{display:block;color:var(--red-hot)}
   .hero__actions .btn,.next__row .btn,.finbanner__btn{width:100%}
 
   .hero__in .wrap{text-align:center}
+  h1.display{font-size:clamp(4rem,5.6vw,5rem)}
+  .hero__sub{font-size:.80rem}
   .kicker{justify-content:center}
   h2.display,.lede,.byline{text-align:center}
   .lede{margin-left:auto;margin-right:auto}
-  .ptabs{justify-content:center}
+  .ptabs{flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .ptabs::-webkit-scrollbar{display:none}
+  .ptab{flex:none;white-space:nowrap}
+
+  /* tighter rhythm between stacked sections */
+  .sec{padding:60px 0}
+
+  /* keyspecs: icon chip + 2 up, closing "also going on" row spans both columns */
+  .keyspecs__in{grid-template-columns:repeat(2,1fr);padding:0 20px}
+  .ks{padding:14px 14px 14px 0;border-right:1px solid var(--line-2)}
+  .ks:nth-child(2n){border-right:0;padding-left:14px;padding-right:0}
+  .ks:nth-child(3),.ks:nth-child(4){border-bottom:0}
+  .ks--brands{grid-column:1 / -1}
+
+  /* parts grid: two up, cards trimmed to fit the narrower column */
+  .wrap--wide{padding:0 20px}
+  .pgrid{grid-template-columns:repeat(2,1fr);gap:12px}
+  .pcard__img{aspect-ratio:1/1}
+  .pcard__body{padding:12px}
+  .pcard__brand{font-size:.56rem}
+  .pcard__t{font-size:.8rem;margin:5px 0 6px}
+  .pcard__p{display:none}
+  .pcard__sku{font-size:.68rem;margin-top:8px;padding-top:8px}
+  .pcard__price{font-size:1.28rem;margin-top:6px}
+  .pcard__acts{margin-top:10px;gap:6px}
+  .pcard__acts a{font-size:.56rem;padding:9px 6px;letter-spacing:.07em}
+  .pcard__flag{font-size:.5rem;padding:4px 7px;top:8px;left:8px}
+
+  /* video: full-bleed so it reads bigger than the padded column beside it */
+  .vidbox{margin-left:-28px;margin-right:-28px;width:calc(100% + 56px);border-radius:0;border-left:0;border-right:0}
+
+  /* blogs: horizontal scroll-snap instead of a stacked column.
+     Inset is set via first/last-child margin, not container padding -
+     Chromium does not reliably render padding at the leading edge of
+     a scrolling flex container, so the first card would sit flush
+     against the screen edge instead of aligning with the rest of the
+     page's 28px margin. */
+  .bgrid{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;margin:38px -28px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .bgrid::-webkit-scrollbar{display:none}
+  .bcard{flex:0 0 78%;scroll-snap-align:start}
+  .bcard:first-child{margin-left:28px}
+  .bcard:last-child{margin-right:28px}
 }
 
 /* ---------- reveal ---------- */
