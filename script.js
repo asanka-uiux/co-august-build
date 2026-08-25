@@ -26,7 +26,7 @@
           price:"$3,691.32",
           scaleValue:1, scaleLabel:"+1mm",
           meters:[["Stance",48],["Rub risk",26],["Daily comfort",92]],
-          note:"TK_NOTE_20x9. The easiest of the three to bolt up, and why that matters when you only have one weekend.",
+          note:"The easiest of the three to bolt up, and why that matters when you only have one weekend.",
           cta:"Build the 20x9 package",
           link:"https://www.customwheeloffset.com/buy-wheel-offset2/D68020908950/BFG44461/fuel-rebel-6-20x9-1-bfgoodrich-all-terrain-t-a-ko3-lt295-60r20" + VEHICLE
         },
@@ -39,7 +39,7 @@
           price:"$4,291.04",
           scaleValue:44, scaleLabel:"+44mm",
           meters:[["Stance",76],["Rub risk",58],["Daily comfort",74]],
-          note:"TK_NOTE_22x95. What the 35s asked for during the swap and how long the set took.",
+          note:"What the 35s asked for during the swap and how long the set took.",
           cta:"Build the 22x9.5 package",
           link:"https://www.customwheeloffset.com/buy-wheel-offset2/52295443601/205610/factory-reproductions-fr52-22x95-44-nitto-trail-grappler-35x1250r22lt" + VEHICLE
         },
@@ -52,57 +52,56 @@
           price:"$3,476.16",
           scaleValue:-51, scaleLabel:"-51mm",
           meters:[["Stance",96],["Rub risk",88],["Daily comfort",54]],
-          note:"TK_NOTE_22x12. The full lock check, what rubbed, and what came off to make it sit right.",
+          note:"The full lock check, what rubbed, and what came off to make it sit right.",
           cta:"Build the 22x12 package",
           link:"https://www.customwheeloffset.com/buy-wheel-offset2/K14922208945/1912002333/arkon-off-road-caesar-22x12-51-kelfire-dmr-rt-33x1250r22lt" + VEHICLE
         }
       ]
     },
 
-    /* Option 01 is what actually went on the truck.
-       Options 02 and 03 are placeholders pending real details. */
+    /* Three real Rough Country routes to the same 3in of front lift we ran. */
     susp: {
       badge: "Option",
       lift: { max: 6 },
       items: [
         {
           name:"Vertex 2.5 RR",
-          prod:"Rough Country", size:"2in lift",
+          prod:"Rough Country", size:"3in lift",
           feature:["Fits","Ford F-150 4WD, 2014 to 2026"],
-          blurb:"Two real inches up front and real damping with no cutting, welding, or spring press, which is the only reason a suspension job belongs on a driveway weekend at all.",
+          blurb:"Three real inches up front and real damping with no cutting, welding, or spring press, which is the only reason a suspension job belongs on a driveway weekend at all.",
           chips:[["Shock body","2.5in RR"],["Install","Bolt on"],["Cutting","None"]],
           price:"$1,299.95",
-          liftValue:2, liftLabel:"2in",
+          liftValue:3, liftLabel:"3in",
           meters:[["Ride quality",84],["Install difficulty",62],["Driveway friendly",88]],
-          note:"TK_NOTE_SUSP_1. What the install actually took, the torque specs that mattered, and where a first timer will slow down.",
+          note:"What the install actually took, the torque specs that mattered, and where a first timer will slow down.",
           cta:"Shop Rough Country suspension",
-          link:"https://www.customwheeloffset.com/"
+          link:"https://www.customwheeloffset.com/store/suspension/60675/rough-country-3-lift-kit-vertex-coilovers-vertex-shocks-14-20-ford-f-150-4wd"
         },
         {
-          name:"TK_OPTION_2",
-          prod:"TK_SUSPENSION_2", size:"TK",
-          feature:["Fits","TK"],
-          blurb:"TK_SUSPENSION_BLURB_2. Details for the second option are coming. Drop in the product name, lift height, fitment range, and the reason a driveway builder would pick this route over the other two.",
-          chips:[["Shock body","TK"],["Install","TK"],["Cutting","TK"]],
-          price:"$TK",
-          liftValue:0, liftLabel:"TK",
-          meters:[["Ride quality",0],["Install difficulty",0],["Driveway friendly",0]],
-          note:"TK_NOTE_SUSP_2. Install notes for this option.",
-          cta:"Shop suspension",
-          link:"https://www.customwheeloffset.com/"
+          name:"N3 Lifted Struts",
+          prod:"Rough Country", size:"3in lift",
+          feature:["Fits","Ford F-150 4WD, 2014 to 2026"],
+          blurb:"The same three inches we ran, for a fraction of the money. The coil ships preloaded, so no spring compressor.",
+          chips:[["Shock body","1 3/8in bore"],["Install","Bolt on"],["Cutting","None"]],
+          price:"$369.95",
+          liftValue:3, liftLabel:"3in",
+          meters:[["Ride quality",78],["Install difficulty",42],["Driveway friendly",94]],
+          note:"Preloaded coil, so the spring compressor stays in the toolbox. Replaces strut spacers, it does not stack on top of them.",
+          cta:"Shop the N3 lifted struts",
+          link:"https://www.customwheeloffset.com/store/suspension/50200/rough-country-3-lift-kit-lifted-n3-struts-n3-shocks-14-20-ford-f-150-4wd"
         },
         {
-          name:"TK_OPTION_3",
-          prod:"TK_SUSPENSION_3", size:"TK",
-          feature:["Fits","TK"],
-          blurb:"TK_SUSPENSION_BLURB_3. Details for the third option are coming. Drop in the product name, lift height, fitment range, and the reason a driveway builder would pick this route over the other two.",
-          chips:[["Shock body","TK"],["Install","TK"],["Cutting","TK"]],
-          price:"$TK",
-          liftValue:0, liftLabel:"TK",
-          meters:[["Ride quality",0],["Install difficulty",0],["Driveway friendly",0]],
-          note:"TK_NOTE_SUSP_3. Install notes for this option.",
-          cta:"Shop suspension",
-          link:"https://www.customwheeloffset.com/"
+          name:"M1 Loaded Struts",
+          prod:"Rough Country", size:"3in lift",
+          feature:["Fits","Ford F-150 4WD, 2014 to 2026"],
+          blurb:"The best ride of the three. A 46mm monotube that firms up over a hit and stays soft the rest of the time.",
+          chips:[["Shock body","46mm monotube"],["Install","Bolt on"],["Cutting","None"]],
+          price:"$549.95",
+          liftValue:3, liftLabel:"3in",
+          meters:[["Ride quality",92],["Install difficulty",44],["Driveway friendly",90]],
+          note:"Preset at 3in in the box. Check fitment first: no Raptor, Tremor, CCD, 3.0L diesel, or heavy duty payload package.",
+          cta:"Shop the M1 loaded struts",
+          link:"https://www.customwheeloffset.com/store/suspension/115118/rough-country-3-inch-lift-kit-m1-struts-14-20-ford-f-150-4wd"
         }
       ]
     }
@@ -328,7 +327,7 @@
   // keep the grid in view when paging, so the reader is not dumped further down the page
   function keepGridInView(){
     var g = el('pgrid').getBoundingClientRect();
-    if (g.top < 80) window.scrollTo({ top: el('pgrid').offsetTop - 90, behavior: 'smooth' });
+    if (g.top < 80) window.scrollTo({ top: window.pageYOffset + g.top - 90, behavior: 'smooth' });
   }
   el('pgPrev').addEventListener('click', function(){ pgPage--; drawPage(); keepGridInView(); });
   el('pgNext').addEventListener('click', function(){ pgPage++; drawPage(); keepGridInView(); });
