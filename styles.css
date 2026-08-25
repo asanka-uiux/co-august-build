@@ -343,7 +343,8 @@ h1.display .l2{display:block;color:var(--red-hot)}
 .finbanner__btn{font-family:'Oswald',sans-serif;font-weight:600;font-size:clamp(.72rem,1.02vw,.85rem);letter-spacing:.13em;text-transform:uppercase;background:#fff;color:#0A0A0B;border-radius:6px;padding:17px 34px;display:inline-flex;align-items:center;gap:10px;transition:transform .2s,box-shadow .2s,background .2s}
 .finbanner__btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(0,0,0,.42);background:#F4F4F6}
 .finbanner__lenders{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:22px;margin-top:24px}
-.finbanner__lenders img{height:36px;width:auto;filter:drop-shadow(0 2px 8px rgba(0,0,0,.25))}
+.finbanner__lenders img{height:36px;width:auto;filter:drop-shadow(0 2px 8px rgba(0,0,0,.25));transition:transform .22s ease,filter .22s ease}
+.finbanner__lenders img:hover{transform:translateY(-2px) scale(1.08);filter:drop-shadow(0 6px 16px rgba(0,0,0,.4)) brightness(1.12)}
 .finbanner__lenders span{font-family:'Oswald',sans-serif;font-size:.58rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#EEBEC3}
 @media(min-width:601px){
   .finbanner{padding:44px 40px 38px}
@@ -369,10 +370,11 @@ h1.display .l2{display:block;color:var(--red-hot)}
 }
 .fincard{border:1px solid var(--line);border-radius:var(--r);background:var(--panel-2);padding:26px;display:flex;flex-direction:column}
 .fincard__logo{height:36px;display:flex;align-items:center;gap:12px;margin-bottom:20px}
-.fincard__logo img{height:100%;width:auto}
+.fincard__logo img{height:100%;width:auto;transition:transform .22s ease}
+.fincard__logo img:hover{transform:scale(1.08)}
 .fincard h4{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;color:var(--white);letter-spacing:.03em;margin:0 0 10px;line-height:1.02}
 .fincard p{font-size:.89rem;color:var(--muted);margin-bottom:20px;flex:1}
-.pill{display:inline-block;font-family:'Oswald',sans-serif;font-size:.6rem;font-weight:600;letter-spacing:.17em;text-transform:uppercase;background:rgba(206,17,38,.16);color:#FF6B76;padding:5px 11px;border-radius:99px;margin-bottom:12px}
+.pill{display:inline-block;font-family:'Oswald',sans-serif;font-size:.82rem;font-weight:600;letter-spacing:.17em;text-transform:uppercase;background:rgba(206,17,38,.16);color:#fff;padding:7px 14px;border-radius:99px;margin-bottom:12px}
 .finnote{margin-top:20px;font-size:.78rem;color:var(--dim)}
 
 /* ---------- tool checklist ---------- */
@@ -579,6 +581,8 @@ h1.display .l2{display:block;color:var(--red-hot)}
   html{font-size:17.5px}
   body{font-size:18px}
 
+  .wrap,.nav__in,.stats__in{padding:0 16px}
+
   .btn{padding:17px 24px;font-size:.82rem}
   .hero__actions,.next__row{flex-direction:column;align-items:center}
   .hero__actions .btn,.next__row .btn,.finbanner__btn{width:100%}
@@ -600,14 +604,14 @@ h1.display .l2{display:block;color:var(--red-hot)}
   .sec{padding:60px 0}
 
   /* keyspecs: icon chip + 2 up, closing "also going on" row spans both columns */
-  .keyspecs__in{grid-template-columns:repeat(2,1fr);padding:0 20px}
+  .keyspecs__in{grid-template-columns:repeat(2,1fr);padding:0 16px}
   .ks{padding:14px 14px 14px 0;border-right:1px solid var(--line-2)}
   .ks:nth-child(2n){border-right:0;padding-left:14px;padding-right:0}
   .ks:nth-child(3),.ks:nth-child(4){border-bottom:0}
   .ks--brands{grid-column:1 / -1}
 
   /* parts grid: two up, cards trimmed to fit the narrower column */
-  .wrap--wide{padding:0 20px}
+  .wrap--wide{padding:0 16px}
   .pgrid{grid-template-columns:repeat(2,1fr);gap:12px}
   .pcard__img{aspect-ratio:1/1}
   .pcard__body{padding:12px}
