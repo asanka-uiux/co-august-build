@@ -495,7 +495,7 @@ h1.display .l2{display:block;color:var(--red-hot)}
     z-index:0;
     background:
       linear-gradient(to right, var(--ink) 0%, var(--ink) 46%, rgba(10,10,11,.82) 60%, rgba(10,10,11,.55) 100%),
-      url('assets/hero-driveway.jpg') no-repeat right center/cover;
+      url('assets/story-background.jpg') no-repeat right center/cover;
   }
 }
 
@@ -548,7 +548,12 @@ h1.display .l2{display:block;color:var(--red-hot)}
 }
 
 /* ---------- next step ---------- */
-.next{position:relative;overflow:hidden;text-align:center;background:var(--ink)}
+.next{
+  position:relative;overflow:hidden;text-align:center;
+  background:
+    linear-gradient(rgba(10,10,11,.88),rgba(10,10,11,.94)),
+    url('assets/next-background.jpg') no-repeat center/cover;
+}
 .next::before{content:"";position:absolute;inset:0;background:radial-gradient(760px 300px at 50% 0%,rgba(206,17,38,.18),transparent 70%)}
 .next__in{position:relative;z-index:2}
 .next .lede{margin:20px auto 0}
