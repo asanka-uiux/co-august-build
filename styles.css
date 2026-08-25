@@ -70,8 +70,8 @@ h2.display{font-size:clamp(2.1rem,4.4vw,3.6rem)}
 /* ---------- hero ---------- */
 .hero{position:relative;min-height:min(calc(100svh - var(--navh)),760px);display:flex;align-items:center;overflow:hidden;margin-top:var(--navh)}
 .hero__bg{position:absolute;inset:0;z-index:0}
-.hero__bg img{width:100%;height:100%;object-fit:cover;object-position:center 66%}
-.hero__bg::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,var(--ink) 3%,rgba(10,10,11,.78) 34%,rgba(10,10,11,.28) 72%,rgba(10,10,11,.42) 100%),linear-gradient(to right,rgba(10,10,11,.82),rgba(10,10,11,.06) 58%)}
+.hero__bg img{width:100%;height:100%;object-fit:cover;object-position:center 66%;transform:scale(1.32) translateX(14%);filter:brightness(1.14)}
+.hero__bg::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,var(--ink) 3%,rgba(10,10,11,.68) 34%,rgba(10,10,11,.2) 72%,rgba(10,10,11,.34) 100%),linear-gradient(to right,rgba(10,10,11,.74),rgba(10,10,11,.04) 58%)}
 .hero__in{position:relative;z-index:2;width:100%;padding:32px 0}
 .stamp{font-family:'Oswald',sans-serif;font-size:.64rem;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--text);margin-bottom:16px;text-shadow:0 1px 12px rgba(0,0,0,.7)}
 .stamp b{color:var(--red-hot);font-weight:600}
@@ -468,9 +468,13 @@ h1.display .l2{display:block;color:var(--red-hot)}
     position:absolute;
     inset:0;
     z-index:0;
-    background:
+    background-color:var(--ink);
+    background-image:
       linear-gradient(to right, var(--ink) 0%, var(--ink) 46%, rgba(10,10,11,.82) 60%, rgba(10,10,11,.55) 100%),
-      url('assets/story-background.jpg') no-repeat right center/cover;
+      url('assets/story-background.jpg');
+    background-repeat:no-repeat;
+    background-position:right center;
+    background-size:auto, contain;
   }
 }
 
@@ -525,9 +529,13 @@ h1.display .l2{display:block;color:var(--red-hot)}
 /* ---------- next step ---------- */
 .next{
   position:relative;overflow:hidden;text-align:center;
-  background:
-    linear-gradient(rgba(10,10,11,.88),rgba(10,10,11,.94)),
-    url('assets/next-background.jpg') no-repeat center/cover;
+  background-color:var(--ink);
+  background-image:
+    linear-gradient(rgba(10,10,11,.82),rgba(10,10,11,.9)),
+    url('assets/next-background.jpg');
+  background-repeat:no-repeat;
+  background-position:center 38%;
+  background-size:auto, cover;
 }
 .next::before{content:"";position:absolute;inset:0;background:radial-gradient(760px 300px at 50% 0%,rgba(206,17,38,.18),transparent 70%)}
 .next__in{position:relative;z-index:2}
