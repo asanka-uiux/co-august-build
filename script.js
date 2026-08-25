@@ -280,42 +280,13 @@
     if (cat === 'wt') return k === 'pkg' || k === 'wheel' || k === 'tire';
     return k === cat;
   }
-  /* 3 by 3 pages, nine cards at a time */
-  var PER_PAGE = 6;
-  var pgCat = 'all', pgPage = 0, pgPool = [];
-  var pager = el('pager'), pgDots = el('pgDots');
-
-  function drawPage(){
-    var total = Math.max(1, Math.ceil(pgPool.length / PER_PAGE));
-    if (pgPage > total - 1) pgPage = total - 1;
-    if (pgPage < 0) pgPage = 0;
-    var start = pgPage * PER_PAGE, end = start + PER_PAGE;
-
-    pcards.forEach(function(c){ c.style.display = 'none'; });
-    pgPool.slice(start, end).forEach(function(c){ c.style.display = ''; c.classList.add('in'); });
-
-    var single = total < 2;
-    pager.hidden = single;
-    el('pgPrev').hidden = single;
-    el('pgNext').hidden = single;
-    el('pgNow').textContent = pgPage + 1;
-    el('pgTotal').textContent = total;
-    el('pgCount').textContent = '. ' + pgPool.length + (pgPool.length === 1 ? ' part' : ' parts');
-    el('pgPrev').disabled = pgPage === 0;
-    el('pgNext').disabled = pgPage >= total - 1;
-
-    var dots = '';
-    for (var i = 0; i < total; i++) {
-      dots += '<button type="button" data-p="' + i + '" aria-current="' + (i === pgPage ? 'true' : 'false') +
-              '" aria-label="Go to page ' + (i + 1) + '"></button>';
-    }
-    pgDots.innerHTML = dots;
-  }
 
   function setCat(cat){
-    pgCat = cat; pgPage = 0;
-    pgPool = pcards.filter(function(c){ return matches(cat, c); });
-    drawPage();
+    pcards.forEach(function(c){
+      var show = matches(cat, c);
+      c.style.display = show ? '' : 'none';
+      if (show) c.classList.add('in');
+    });
   }
 
   ptabs.forEach(function(t){
@@ -323,17 +294,6 @@
       ptabs.forEach(function(x){ x.setAttribute('aria-selected', x === t ? 'true' : 'false'); });
       setCat(t.dataset.cat);
     });
-  });
-  // keep the grid in view when paging, so the reader is not dumped further down the page
-  function keepGridInView(){
-    var g = el('pgrid').getBoundingClientRect();
-    if (g.top < 80) window.scrollTo({ top: window.pageYOffset + g.top - 90, behavior: 'smooth' });
-  }
-  el('pgPrev').addEventListener('click', function(){ pgPage--; drawPage(); keepGridInView(); });
-  el('pgNext').addEventListener('click', function(){ pgPage++; drawPage(); keepGridInView(); });
-  pgDots.addEventListener('click', function(e){
-    var b = e.target.closest('button[data-p]');
-    if (b) { pgPage = parseInt(b.dataset.p, 10); drawPage(); keepGridInView(); }
   });
   setCat('all');
 
