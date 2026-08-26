@@ -872,3 +872,15 @@ paragraph, active only at 681px and up (`.tel-br{display:none}` by default,
 existing `MOBILE REFINEMENTS` block uses for the opposite direction. On phones the number now reads
 inline with the sentence as before; on desktop it drops to its own line. Verified no horizontal
 overflow at 390, 820, 1001, 1024, 1280, 1440, 1920px.
+
+---
+
+## 31. Round 31: lighter section-wide wash
+
+Reduced `#story::before`'s uniform overlay from `rgba(10,10,11,.72)` to `.32` - the photo now
+reads much clearer instead of sitting under a heavy dark film. Safe to drop this much because the
+round-26 card layout already carries its own legibility: the titlebar (.88), byline pill (.65), and
+prose card (.55) each darken their own text independently of this section-wide wash, which now only
+has to do enough work to keep the *bare* photo areas (outside every card) from overpowering the UI
+chrome around them - not carry text contrast on its own like it did back in rounds 20-25. Verified
+no horizontal overflow at 1001, 1024, 1280, 1440, 1920px, text in every card still reads clearly.

@@ -481,7 +481,7 @@ h1.display .l2{display:block;color:var(--red-hot)}
     z-index:0;
     background-color:var(--ink);
     background-image:
-      linear-gradient(rgba(10,10,11,.72), rgba(10,10,11,.72)),
+      linear-gradient(rgba(10,10,11,.32), rgba(10,10,11,.32)),
       url('assets/story-background.jpg');
     background-repeat:no-repeat;
     background-position:center center, center center;
