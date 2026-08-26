@@ -96,8 +96,8 @@ h1.display .l2{display:block;color:var(--red-hot)}
 .ks__icon{flex:none;width:32px;height:32px;border-radius:7px;background:rgba(206,17,38,.14);color:#FF6B76;display:flex;align-items:center;justify-content:center}
 .ks__icon svg{width:18px;height:18px}
 .ks__text{min-width:0;flex:1}
-.ks__l{font-family:'Oswald',sans-serif;font-weight:500;font-size:.61rem;letter-spacing:.19em;text-transform:uppercase;color:var(--dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.ks__a{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.02rem,1.34vw,1.34rem);color:var(--white);letter-spacing:.028em;line-height:1.18;margin-top:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ks__l{font-family:'Oswald',sans-serif;font-weight:500;font-size:.61rem;letter-spacing:.19em;text-transform:uppercase;color:var(--dim);white-space:normal;overflow:visible}
+.ks__a{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.02rem,1.34vw,1.34rem);color:var(--white);letter-spacing:.028em;line-height:1.18;margin-top:8px;white-space:normal;overflow:visible}
 .ks__b{font-family:'Rajdhani',sans-serif;font-weight:600;font-size:clamp(.76rem,.9vw,.88rem);color:var(--muted);margin-top:3px;letter-spacing:.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .ks--brands .ks__a,.ks--brands .ks__b{white-space:normal;overflow:visible}
 @media(min-width:681px){
