@@ -620,6 +620,8 @@ h1.display .l2{display:block;color:var(--red-hot)}
   .mode__p,.stage__blurb,.ti__w,.q__body p,.prose p{font-size:.8rem}
   .ptab{flex:none;white-space:nowrap}
 
+  .stage__foot{padding-top:24px;padding-bottom:24px}
+
   /* tighter rhythm between stacked sections */
   .sec{padding:60px 0}
 

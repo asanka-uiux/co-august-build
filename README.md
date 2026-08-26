@@ -1029,3 +1029,19 @@ layout, sticky image). Markup, CSS, and script.js are untouched; the section jus
 Verified `getComputedStyle` reports `display:none` and `offsetHeight:0`, and no horizontal overflow
 at 390, 820, 1024, 1440, 1920px with it gone from the flow. To bring it back, delete the `hidden`
 attribute on the `<section id="story-split">` tag - nothing else needs to change.
+
+---
+
+## 38. Round 38: .stage__foot padding, scoped to mobile width instead of window height
+
+Given `.stage__foot{padding-top:24px;padding-bottom:24px}` inside `@media(max-height:960px)`, but
+that selector already existed there at a different value (`padding-top:12px`, no `padding-bottom`)
+as part of the "short-viewport fit, independent of device width" system (the same one that resizes
+the hero sub-copy) - it deliberately keys off window height, not device width, so it also fires on a
+short desktop browser window. Since the ask was "update on mobile", added the new values as their
+own rule inside the existing `@media(max-width:680px)` MOBILE REFINEMENTS block instead, which is
+width-based. Verified computed styles directly: at 390px wide the mobile rule wins with
+`padding-top:24px;padding-bottom:24px` (it comes later in the file, same specificity); at 1440x900 -
+narrow height, wide width - the original height-tier's `padding-top:12px` still applies untouched,
+confirming the two systems don't fight each other. No horizontal overflow at 390, 680, 681, 820,
+1024, 1440px.
