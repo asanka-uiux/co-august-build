@@ -753,3 +753,35 @@ crop - with the whole frame equally dimmed, that tuning question goes away.
 Verified at 1001, 1024, 1280, 1440, 1920px: no horizontal overflow, and every heading/paragraph
 reads clearly against the wash at every width, including where text overlaps the truck's brightest
 chrome/glass reflections.
+
+---
+
+## 26. Round 26: taller photo, plus centered card layout
+
+**Photo swap.** Another stakeholder photo (`story_bg2.png`, 1440x1500) replaced
+`assets/story-background.jpg` (quality 85 JPEG, original kept at `raw-originals/story_bg2.png`).
+Unlike every previous story photo (all ~16:9), this one is nearly square and close to this
+section's own box aspect, so `cover` crops barely anything - both the worker and the full truck
+front (grille, headlight, fog light) render with almost no loss on either edge. `background-
+position` stayed `center center` from round 25.
+
+**Centered card layout.** Given a reference screenshot: instead of the intro block and prose
+running full width at the wrap's left edge, the whole column is now centered on the page with the
+photo visible on both sides, and each text block sits in its own darkened card rather than relying
+solely on the section-wide wash:
+
+- New `.story__col` wrapper (`max-width:800px;margin:0 auto`) centers everything.
+- Kicker+h2 moved into `.story__titlebar` - a `width:fit-content` block (not `inline-block`; see
+  the bug note below) with a near-opaque background, `var(--r)` corner radius, and a 3px red
+  left-border accent. Text inside stays left-aligned even though the box itself is centered.
+- `.byline` became a small centered pill (`border-radius:999px`, translucent dark background).
+- `.prose` became a translucent rounded card (`rgba(10,10,11,.55)`) with padding, paragraphs still
+  left-aligned inside it - centering the container, not the copy.
+
+**Bug caught before shipping:** first pass used `display:inline-block` on both the titlebar and
+the byline for the margin-auto centering trick. At 1024px the titlebar wraps to two lines but
+doesn't consume the container's full width, and inline-block siblings flow like text - so the
+byline pill drifted up onto the same line as the wrapped heading instead of stacking below it.
+Fixed by switching both to `width:fit-content` on a normal block box, which always starts a new
+line regardless of content width. Verified at 390, 820, 1001, 1024, 1280, 1440, 1920px: no
+horizontal overflow and the two elements stack correctly at every size.

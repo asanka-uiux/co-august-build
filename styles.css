@@ -453,14 +453,23 @@ h1.display .l2{display:block;color:var(--red-hot)}
 /* ---------- story ---------- */
 #story{position:relative;overflow:hidden}
 #story .wrap{position:relative;z-index:1}
-.byline{font-family:'Oswald',sans-serif;font-size:.68rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);margin-top:16px}
-.prose{max-width:74ch;margin-top:36px}
+.story__col{max-width:800px;margin:0 auto}
+.story__titlebar{width:fit-content;max-width:100%;text-align:left;margin:0 auto;
+  background:rgba(10,10,11,.88);border-left:3px solid var(--red);
+  border-radius:0 var(--r) var(--r) 0;padding:22px 30px}
+.story__titlebar .kicker{margin-bottom:12px}
+.byline{width:fit-content;font-family:'Oswald',sans-serif;font-size:.68rem;font-weight:500;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--dim);margin:22px auto 0;
+  background:rgba(10,10,11,.65);border-radius:999px;padding:9px 22px}
+.prose{max-width:100%;margin:32px auto 0;text-align:left;
+  background:rgba(10,10,11,.55);border-radius:var(--r);padding:34px 38px}
 .prose h3{font-family:'Bebas Neue',sans-serif;font-size:1.65rem;color:var(--white);letter-spacing:.04em;margin:38px 0 12px;line-height:1.1}
 .prose h3:first-child{margin-top:0}
 .prose p{margin-bottom:16px;color:var(--muted)}
 .prose p strong{color:var(--text);font-weight:600}
 .prose a{color:var(--red-hot);text-decoration:none;border-bottom:1px solid rgba(255,32,54,.4)}
 .prose a:hover{color:#fff;border-color:#fff}
+@media(max-width:600px){.prose{padding:26px 22px}}
 
 @media(min-width:1001px){
   #story::before{
