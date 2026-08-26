@@ -666,3 +666,32 @@ within that technique could reveal him. Tried replacing it with a real `<img>` i
 above the prose instead. That didn't land — reverted back to the original `#story::before`
 background-image at the user's request, unchanged from before this round. Worth knowing before
 trying again: the mask-vs-worker conflict above is still unresolved in the current markup.
+
+---
+
+## 22. Build-story background: cover crop, then the worker made visible
+
+Two follow-up passes on the same `#story::before` background-image, both keeping it as a
+background-image per the round 21 revert.
+
+**Fill the section, no letterboxing.** `background-size` for the photo layer was `contain`, which
+at this section's height (much taller than the photo's 16:9) left solid `--ink` gaps above and
+below it. Changed to `cover` — the photo now fills the section's full height with no gaps, cropped
+by width instead.
+
+**Bring the worker into frame.** `cover` alone made it worse for visibility, not better: at
+`background-position:right center` the crop window only showed the truck's grille, with the worker
+cropped off-canvas entirely (not just masked). Per the round-21 finding, worker and truck together
+are wider than the section can show in one crop without either losing the worker or losing most of
+the truck — asked which trade-off to take; chose **worker fully in frame, truck's cab and bed rail
+only** (no grille/wheels/front bumper). Implemented as `background-position:left center, 0% center`
+(pans the crop window to the photo's left edge).
+
+At that crop the worker still sat mostly under the gradient's opaque 0-46% zone, though — visible
+in outline but too dark to read. Narrowed and lightened the gradient (opaque 0-46% -> 0-27%, softer
+fade curve down to .32 alpha by 100%, versus the old floor of .55) so he reads clearly at full
+opacity's edge while staying dim enough for the darkest part still to back the kicker/h2/byline
+text. Checked every paragraph's rightmost extent against the new curve at 1440 and 1024px wide -
+all still comfortably legible, including where headings text now runs directly over his hoodie at
+1024px (lower contrast there than elsewhere, but still readable). No horizontal overflow at either
+width. Mobile is unaffected — the photo still only shows at 1001px and up, same gate as before.
