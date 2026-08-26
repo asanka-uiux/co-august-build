@@ -884,3 +884,15 @@ prose card (.55) each darken their own text independently of this section-wide w
 has to do enough work to keep the *bare* photo areas (outside every card) from overpowering the UI
 chrome around them - not carry text contrast on its own like it did back in rounds 20-25. Verified
 no horizontal overflow at 1001, 1024, 1280, 1440, 1920px, text in every card still reads clearly.
+
+---
+
+## 32. Round 32: prose paragraphs join the mobile 14px body-copy rule
+
+`.prose p` was the one body-copy class not covered by the sitewide "description/body copy unified
+to 14px on mobile" rule (`@media(max-width:680px){ .mode__p,.stage__blurb,.ti__w,.q__body p{...} }`,
+in the MOBILE REFINEMENTS block). Added it to that same rule rather than writing a new one - now
+`.8rem` (14px, since mobile's base `html{font-size:17.5px}` makes `.8rem` compute to exactly 14px)
+on both `#story` and `#story-split` (they share `.prose`), unchanged at 17px on desktop. Verified
+computed `font-size` at 390px is 14px and 1440px is 17px, and no horizontal overflow at 390, 680,
+681, 820, 1024, 1440px.

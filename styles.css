@@ -609,7 +609,7 @@ h1.display .l2{display:block;color:var(--red-hot)}
   .ptabs::-webkit-scrollbar{display:none}
 
   /* description/body copy unified to 14px on mobile */
-  .mode__p,.stage__blurb,.ti__w,.q__body p{font-size:.8rem}
+  .mode__p,.stage__blurb,.ti__w,.q__body p,.prose p{font-size:.8rem}
   .ptab{flex:none;white-space:nowrap}
 
   /* tighter rhythm between stacked sections */
