@@ -487,6 +487,26 @@ h1.display .l2{display:block;color:var(--red-hot)}
   }
 }
 
+/* ---------- story, split layout ---------- */
+/* Same copy as #story above, different treatment: plain text in a left
+   column (no card backgrounds - #story-split's own .byline/.prose reset
+   the round-26 card styling below) and the photo as a real <img> in its
+   own right-hand column instead of a full-bleed background. On desktop
+   the media column is `position:sticky` so it holds in place while the
+   text column - much taller, a full article - scrolls past it. */
+.story-split{background:var(--ink)}
+.story-split__grid{display:flex;flex-direction:column;gap:40px}
+#story-split .byline{width:auto;display:block;background:none;border-radius:0;padding:0;margin:16px 0 0}
+#story-split .prose{width:auto;max-width:74ch;margin:36px 0 0;background:none;border-radius:0;padding:0}
+.story-split__img{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:#000}
+.story-split__img img{width:100%;height:auto;display:block}
+.story-split__caption{margin-top:12px;font-size:.82rem;font-style:italic;color:var(--dim)}
+@media(min-width:901px){
+  .story-split__grid{flex-direction:row;align-items:flex-start;gap:56px}
+  .story-split__text{flex:1.15;min-width:0}
+  .story-split__media{flex:1;position:sticky;top:calc(var(--navh) + 28px);max-width:480px}
+}
+
 /* ---------- faq ---------- */
 .faqsec{background:var(--panel);border-top:1px solid var(--line-2)}
 .faq{margin-top:40px;border-top:1px solid var(--line-2)}

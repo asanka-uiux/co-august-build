@@ -807,3 +807,42 @@ Same action-shot composition - worker kneeling with the impact wrench, full gril
 in frame - just a slightly wider framing. Because the aspect ratio matches the round 26 photo, the
 existing `background-size:cover;background-position:center center` needed no adjustment at all.
 Verified no horizontal overflow at 390, 820, 1001, 1024, 1280, 1440, 1920px.
+
+---
+
+## 29. Round 29: second build-story section, split layout with a sticky image
+
+Added a new section, `#story-split`, directly under `#story` - same copy (kicker, heading,
+byline, all six prose paragraphs/headings) but a different treatment, per a reference screenshot:
+plain left-aligned text in a left column, the photo as a real `<img>` with a caption in a right
+column, and the image pinned in place while the text scrolls past it. `#story` itself is
+unchanged.
+
+**Why this needed its own CSS, not just reused classes.** `.byline` and `.prose` already carry the
+round-26 centered-card look (dark background, border-radius, padding, centered as a block) built
+for `#story`'s full-bleed-photo treatment. Reusing those class names here would have pulled that
+styling in unchanged, since CSS classes aren't scoped to one section. Scoped it back to plain text
+with `#story-split .byline{...}` / `#story-split .prose{...}` resets (background:none, padding:0,
+etc.) rather than inventing new class names, so the shared typography (font, color, spacing) still
+comes from the base rules.
+
+**Layout.** `.story-split__grid` is a flex row (`align-items:flex-start`) above 900px wide: text
+column `flex:1.15`, media column `flex:1;max-width:480px`. Flexbox rather than grid specifically
+because `align-items:flex-start` keeps the media column only as tall as its own content (image +
+caption) instead of stretching to match the much-taller text column - required for the sticky
+column to have room to actually move relative to its container as you scroll. Below 900px the grid
+switches to a single stacked column (text, then image+caption); sticky only applies at 901px+, since
+stacked columns have nothing to stick relative to.
+
+**Sticky verified, not assumed.** Scrolled the page programmatically and read the media column's
+`getBoundingClientRect().top` at two scroll positions 900px apart mid-article: both landed at the
+same offset (`--navh` + 28px), confirming it holds in place rather than scrolling with the page.
+Also checked the release behavior at the very end of the section - the sticky image correctly stops
+and scrolls away with its container once the text (and therefore the section) ends, instead of
+overlapping the FAQ section below.
+
+Mobile intro block (kicker/h2/byline) centers per the existing sitewide `MOBILE REFINEMENTS`
+convention (`@media(max-width:680px)`, documented in its own comment above the `.next` section
+rules) - deliberate sitewide behavior, not something new to this section, and the prose body
+correctly keeps its left alignment per that same rule. Verified no horizontal overflow at 390, 820,
+900, 901, 1024, 1280, 1440, 1920px.
