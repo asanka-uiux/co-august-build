@@ -734,3 +734,22 @@ arguably fits "The Build Story" better than a static grille shot would.
 Verified no horizontal overflow at 1001, 1024, 1280, 1440, 1920px, and text stays legible
 throughout, including at 1024px where the truck is barely present (just the bumper/tire corner)
 but the worker still reads clearly.
+
+---
+
+## 25. Round 25: uniform dark wash replaces the left-to-right reveal gradient
+
+Given a reference screenshot of the desired look: photo visible (dimmed) across the entire
+section, same darkness everywhere, instead of the directional gradient this section had used since
+round 20 (solid opaque on the left where text sits, fading in the photo toward the right).
+
+Replaced the multi-stop `linear-gradient(to right, ...)` mask with a single flat overlay -
+`linear-gradient(rgba(10,10,11,.72), rgba(10,10,11,.72))` - and changed `background-position` for
+the photo layer from a tuned pan (chasing wherever the worker or truck happened to land clear of
+the mask) to plain `center center`, since a uniform wash no longer needs the subject positioned
+away from a "text zone." This also retires the round 21-24 push-pull over exactly where to pan the
+crop - with the whole frame equally dimmed, that tuning question goes away.
+
+Verified at 1001, 1024, 1280, 1440, 1920px: no horizontal overflow, and every heading/paragraph
+reads clearly against the wash at every width, including where text overlaps the truck's brightest
+chrome/glass reflections.
