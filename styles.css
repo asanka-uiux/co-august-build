@@ -473,7 +473,7 @@ h1.display .l2{display:block;color:var(--red-hot)}
       linear-gradient(to right, var(--ink) 0%, var(--ink) 27%, rgba(10,10,11,.78) 42%, rgba(10,10,11,.5) 65%, rgba(10,10,11,.32) 100%),
       url('assets/story-background.jpg');
     background-repeat:no-repeat;
-    background-position:left center, 0% center;
+    background-position:right center, 100% center;
     background-size:auto, cover;
   }
 }

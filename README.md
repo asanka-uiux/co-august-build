@@ -695,3 +695,21 @@ text. Checked every paragraph's rightmost extent against the new curve at 1440 a
 all still comfortably legible, including where headings text now runs directly over his hoodie at
 1024px (lower contrast there than elsewhere, but still readable). No horizontal overflow at either
 width. Mobile is unaffected — the photo still only shows at 1001px and up, same gate as before.
+
+---
+
+## 23. Round 23: better source photo replaces the worker/truck trade-off entirely
+
+A new stakeholder photo (`truck_image.png`, 1672x941) landed loose in `assets/` with the worker
+and truck flipped from the old `story-background.jpg`: truck on the left/center, worker on the
+right, both fully in frame together at a wider angle. Converted to `assets/story-background.jpg`
+(same filename the CSS already points at, quality 85 JPEG, no resize needed) and the original kept
+at `raw-originals/truck_image.png`.
+
+This retires the round-22 trade-off. Flipped `background-position` back to `right center, 100%
+center` to match the new photo's layout (worker now lands in the crop's right/visible side instead
+of needing the left pan), and kept the round-22 lightened gradient as-is - it happens to suit this
+photo well too. Result: the worker is fully visible AND the truck's grille, hood, and front fender
+are in frame (previously it was one or the other). Verified no horizontal overflow at 1001, 1024,
+1280, 1440, and 1920px wide, and that text stays legible at every width, including where it crosses
+his hoodie at 1024px.
