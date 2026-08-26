@@ -474,7 +474,7 @@ h1.display .l2{display:block;color:var(--red-hot)}
       url('assets/story-background.jpg');
     background-repeat:no-repeat;
     background-position:right center;
-    background-size:auto, contain;
+    background-size:auto, cover;
   }
 }
 

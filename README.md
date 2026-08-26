@@ -269,6 +269,7 @@ set to `0` shows "TK" instead of a score.
 
 ## 11. Before it goes live
 
+- [x] Package photos for Setup 01 and Setup 02, and an updated full-build hero shot (round 20)
 - [ ] Product photos and prices for every card
 - [ ] Official Affirm and Katapult logos, plus their real pre-qualify URLs
 - [ ] The six individual wheel and tire product links, plus the Vertex SKU and link
@@ -621,3 +622,47 @@ Verified: `node --check` on `script.js` passes, and `styles.css` has matching br
 counts. No visual regression check was possible in this pass since there is no browser tool
 available here — recommend opening `index.html` at a phone width, a tablet width, and a wide desktop
 width before treating this as final.
+
+---
+
+## 20. Round 20: real photos for the two remaining package cards, updated hero
+
+Four new stakeholder photos landed in `assets/`: `Package_001.jpg`, `Package_002.jpg`,
+`Setup_002.jpg`, `Updatd_Full_Build.jpg`. All four were raw camera exports (10-50MB each,
+non-standard aspect ratios), so each was resized and re-compressed with `sips` to match the
+weight of the site's existing real photos before being wired in. The originals are kept at
+`raw-originals/` (outside `assets/`, not part of the upload set) rather than discarded.
+
+| Source file | Wired in as | Replaces |
+|---|---|---|
+| `Package_001.jpg` | `assets/pkg-20x9.jpg` | Setup 01 package placeholder |
+| `Package_002.jpg` | `assets/pkg-22x95.jpg` | Setup 02 package placeholder |
+| `Setup_002.jpg` | `assets/setup-22x95.jpg` | Setup 02 stage-photo placeholder |
+| `Updatd_Full_Build.jpg` | `assets/build-full.jpg` | Previous full-build hero photo |
+
+**Matching was verified by content, not just filename.** `Package_001.jpg` shows the gunmetal
+Fuel Rebel 6 on a BFGoodrich KO3, an exact match for the Setup 01 label. `Package_002.jpg` and
+`Setup_002.jpg` both show a polished-chrome multi-spoke wheel that does not visually resemble the
+FR52-on-35in-Trail-Grappler description in the Setup 02 copy — but that same chrome wheel is
+already what the site's existing, previously-committed `pkg-22x12.jpg` and `build-full.jpg` real
+photos show. Since those two shipped in an earlier round without objection, the chrome wheel is
+evidently how this truck actually photographs across setups, not a mismatched delivery, so all
+four were wired in as named.
+
+No markup or CSS changed — every `<img src>` already pointed at these exact filenames
+(`assets/pkg-20x9.jpg`, `assets/pkg-22x95.jpg`, `assets/setup-22x95.jpg`, `assets/build-full.jpg`),
+so replacing the files was the entire change. `pkg-22x95.jpg` and `setup-22x95.jpg` no longer
+render their "PLACEHOLDER . REPLACE BEFORE LAUNCH" card.
+
+---
+
+## 21. Build-story photo: framed-banner attempt tried and reverted
+
+Asked to show the build-team worker and the truck together in the build-story photo (zoomed out a
+bit) plus the page's scroll-reveal on it. The photo's `background-image`/gradient-mask technique on
+`#story::before` was masking the worker permanently — he sits at roughly 20-35% across the source
+frame, which is exactly the stretch the text-legibility gradient keeps opaque — so no resize/pan
+within that technique could reveal him. Tried replacing it with a real `<img>` in a framed banner
+above the prose instead. That didn't land — reverted back to the original `#story::before`
+background-image at the user's request, unchanged from before this round. Worth knowing before
+trying again: the mask-vs-worker conflict above is still unresolved in the current markup.

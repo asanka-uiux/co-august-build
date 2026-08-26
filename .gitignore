@@ -22,3 +22,6 @@ Desktop.ini
 
 # Logs
 *.log
+
+# Raw camera exports, kept locally as backups for the processed assets/ files
+raw-originals/
