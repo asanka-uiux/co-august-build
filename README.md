@@ -1019,3 +1019,13 @@ ten...") addressed to whoever writes it, not something to invent. Q1 carries a d
 feedback from Banker", also not mine to resolve.
 
 Verified no horizontal overflow at 390, 600, 601, 820, 1024, 1440px after the finbanner logo change.
+
+---
+
+## 37. Round 37: hide the split-layout build-story section
+
+Added the `hidden` attribute to `#story-split` (the round-29 second build-story section - split
+layout, sticky image). Markup, CSS, and script.js are untouched; the section just does not render.
+Verified `getComputedStyle` reports `display:none` and `offsetHeight:0`, and no horizontal overflow
+at 390, 820, 1024, 1440, 1920px with it gone from the flow. To bring it back, delete the `hidden`
+attribute on the `<section id="story-split">` tag - nothing else needs to change.
