@@ -796,3 +796,14 @@ already handled it without further changes - the heading sits on one line down t
 only wraps (naturally, at a sensible word boundary, not forced) on narrower phone widths where it
 cannot fit even at the clamp's minimum size. Verified no horizontal overflow at 390, 1024, and
 1440px.
+
+---
+
+## 28. Round 28: another photo swap, no CSS changes needed
+
+`story_bg3.png` (1440x1500, same near-square aspect as round 26's `story_bg2.png`) replaced
+`assets/story-background.jpg` (quality 85 JPEG, original kept at `raw-originals/story_bg3.png`).
+Same action-shot composition - worker kneeling with the impact wrench, full grille and headlight
+in frame - just a slightly wider framing. Because the aspect ratio matches the round 26 photo, the
+existing `background-size:cover;background-position:center center` needed no adjustment at all.
+Verified no horizontal overflow at 390, 820, 1001, 1024, 1280, 1440, 1920px.
