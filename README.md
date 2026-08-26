@@ -846,3 +846,29 @@ convention (`@media(max-width:680px)`, documented in its own comment above the `
 rules) - deliberate sitewide behavior, not something new to this section, and the prose body
 correctly keeps its left alignment per that same rule. Verified no horizontal overflow at 390, 820,
 900, 901, 1024, 1280, 1440, 1920px.
+
+---
+
+## 30. Round 30: another photo swap (portrait this time), plus a line-break tweak
+
+**Photo swap.** `story_bg_new.png` (1200x1500, 4:5 portrait - narrower than every previous story
+photo, which were all ~16:9 or near-square) replaced `assets/story-background.jpg` again (quality
+85 JPEG, original kept at `raw-originals/story_bg_new.png`). This one is the finished truck, worker
+standing beside it, full side profile in frame - closer to the "standing" pose from the round-25
+reference screenshot than any of the action shots used since.
+
+Because this photo is portrait rather than landscape, `#story`'s `cover` crop math flips: scaleX
+(1440/1200=1.2) now exceeds scaleY (1543/1500=1.029), so it's width-bound instead of height-bound.
+Practical effect: **zero horizontal crop** - the full frame width shows edge to edge, worker
+included, with only a little cropped off the top and bottom (sky and pavement, not the subjects).
+No CSS changes needed for `#story`. `#story-split`'s image shows at its natural aspect regardless
+(no `object-fit:cover` there), so it needed no changes either - only its caption did, since the old
+"mid-install" wording no longer matched a finished-truck photo. Updated to describe the finished
+build instead.
+
+**Line break.** Added `<br class="tel-br">` right before the phone number in both sections' closing
+paragraph, active only at 681px and up (`.tel-br{display:none}` by default,
+`@media(min-width:681px){.tel-br{display:initial}}`) - the same "desktop" cutoff the codebase's
+existing `MOBILE REFINEMENTS` block uses for the opposite direction. On phones the number now reads
+inline with the sentence as before; on desktop it drops to its own line. Verified no horizontal
+overflow at 390, 820, 1001, 1024, 1280, 1440, 1920px.

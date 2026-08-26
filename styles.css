@@ -469,6 +469,8 @@ h1.display .l2{display:block;color:var(--red-hot)}
 .prose p strong{color:var(--text);font-weight:600}
 .prose a{color:var(--red-hot);text-decoration:none;border-bottom:1px solid rgba(255,32,54,.4)}
 .prose a:hover{color:#fff;border-color:#fff}
+.tel-br{display:none}
+@media(min-width:681px){.tel-br{display:initial}}
 @media(max-width:600px){.prose{padding:26px 22px}}
 
 @media(min-width:1001px){
