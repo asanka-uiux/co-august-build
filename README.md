@@ -954,3 +954,28 @@ short-viewport override and the mobile `MOBILE REFINEMENTS` override untouched, 
 part of the ask.
 
 Verified no horizontal overflow at 390, 680, 681, 820, 1024, 1280, 1440, 1920px.
+
+---
+
+## 35. Round 35: story photo softness explained, .next gets a fixed height
+
+**Why the story photo looks soft on large screens.** Checked every photo delivered this session:
+`story-background.jpg` (the current one, from round 30's `story_bg_new.png`) is 1200x1500 - the
+lowest-resolution file of the bunch by a wide margin (everything else ranges 1440px up to 9504px
+wide). `background-size:cover` has to upscale a 1200px-wide source to fill anything wider than that,
+so past roughly a 1200-1300px viewport the browser is stretching pixels that do not exist rather
+than showing real detail - no CSS technique adds resolution a source file does not have. Re-exported
+the JPEG at quality 95 (was 85) to remove what softness *was* fixable, compression artifacting, but
+the underlying resolution ceiling is unchanged. Flagging rather than guessing further: if a
+higher-resolution version of this same photo exists, that is the actual fix; otherwise one of the
+other, sharper photos already in `raw-originals/` (1440px+ wide) could stand in.
+
+**`.next` gets a fixed height, content centered.** Added `height:800px` to `.next` exactly as
+given, plus `display:flex;flex-direction:column;align-items:center;justify-content:center` so the
+content block centers vertically inside that fixed height (previously it had no explicit height, so
+this was needed net-new - text was already horizontally centered via the existing `text-align:
+center`). `box-sizing:border-box` is global in this file, so the 800px includes `.sec`'s own
+top/bottom padding rather than adding to it. Verified `.next`'s `getBoundingClientRect().height`
+and `scrollHeight` both read exactly 800 at 390, 680, 820, 1024, 1280, 1440, 1920px - confirms
+`overflow:hidden` is never actually clipping content at any width, not just that it looks fine in a
+screenshot.

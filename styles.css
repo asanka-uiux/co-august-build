@@ -573,6 +573,8 @@ h1.display .l2{display:block;color:var(--red-hot)}
   background-repeat:no-repeat;
   background-position:center 38%;
   background-size:auto, cover;
+  height:800px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
 }
 .next::before{content:"";position:absolute;inset:0;background:radial-gradient(760px 300px at 50% 0%,rgba(206,17,38,.18),transparent 70%)}
 .next__in{position:relative;z-index:2}
