@@ -979,3 +979,43 @@ top/bottom padding rather than adding to it. Verified `.next`'s `getBoundingClie
 and `scrollHeight` both read exactly 800 at 390, 680, 820, 1024, 1280, 1440, 1920px - confirms
 `overflow:hidden` is never actually clipping content at any width, not just that it looks fine in a
 screenshot.
+
+---
+
+## 36. Round 36: full content audit against the copy doc
+
+User flagged the page might be ahead of the copy doc and asked for a pass to reconcile. Read the doc
+in full and diffed it section by section against the live `index.html`/`script.js`, rather than
+re-applying it blind.
+
+**Already matched, no action needed:** hero copy (including the "rolled into this driveway on a
+Saturday morning" opening line), "3in lift" everywhere (spec bar, tool checklist, FAQ Q3, parts
+list, suspension data), the tool checklist reorder (screwdriver added to non-negotiable, tire
+pressure gauge removed, trim removal tools moved to "Made it faster", "pizza and beer" added to the
+second-set-of-hands item), the BNPL lede, financing banner/modal copy, footer, "Tuner" dropped from
+the Flashcal name, Interior/Coverking cards removed, SKU indicators removed, parts links pointing at
+real products. Notably, **all three suspension options (Vertex/N3/M1) were already fully built** -
+tabs, copy, chips, meters, prices, and correctly-matched product photos, not placeholders - this
+must have shipped in a round before this doc was shared. The doc's parts-carousel-arrows bug note is
+moot too: that whole pagination mechanism was removed in an earlier round (see git log), which
+eliminates the described bug by removing the thing that caused it.
+
+**Verified rather than assumed:** the Vertex option's "Fits" line, which the doc specifically flagged
+as looking cut off in a screenshot, renders on one clean line with no CSS truncation at 1440px -
+screenshotted to confirm rather than trusting the CSS alone.
+
+**Real gaps found and fixed:**
+- N3 and M1 strut product links pointed at different product IDs than the doc's given URLs
+  (`.../suspension/50200/...` and `.../suspension/115118/...`) - updated to the doc's exact links
+  (`.../suspension/74696/...` and `.../suspension/115552/...`).
+- Financing banner logos were small (36-42px) against the doc's "make them more pronounced" note.
+  Both PNGs already carry their own white card background, so no extra wrapper was needed - just
+  scaled them to 52px (64px at 601px+) and gave the row more breathing room (28px/36px gap, more
+  margin-top).
+
+**Left open, correctly:** FAQ Q4 and Q5 are still the "being finalized" placeholder text - the doc's
+own copy for these is itself a TK note ("give the real answer per package...", "rate each one out of
+ten...") addressed to whoever writes it, not something to invent. Q1 carries a doc note "Awaiting
+feedback from Banker", also not mine to resolve.
+
+Verified no horizontal overflow at 390, 600, 601, 820, 1024, 1440px after the finbanner logo change.

@@ -342,14 +342,14 @@ h1.display .l2{display:block;color:var(--red-hot)}
 .finbanner__p{font-size:.97rem;color:#F1D2D6;max-width:62ch;margin:0 auto 26px}
 .finbanner__btn{font-family:'Oswald',sans-serif;font-weight:600;font-size:clamp(.72rem,1.02vw,.85rem);letter-spacing:.13em;text-transform:uppercase;background:#fff;color:#0A0A0B;border-radius:6px;padding:17px 34px;display:inline-flex;align-items:center;gap:10px;transition:transform .2s,box-shadow .2s,background .2s}
 .finbanner__btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(0,0,0,.42);background:#F4F4F6}
-.finbanner__lenders{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:22px;margin-top:24px}
-.finbanner__lenders img{height:36px;width:auto;filter:drop-shadow(0 2px 8px rgba(0,0,0,.25));transition:transform .22s ease,filter .22s ease}
-.finbanner__lenders img:hover{transform:translateY(-2px) scale(1.08);filter:drop-shadow(0 6px 16px rgba(0,0,0,.4)) brightness(1.12)}
-.finbanner__lenders span{font-family:'Oswald',sans-serif;font-size:.58rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#EEBEC3}
+.finbanner__lenders{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:28px;margin-top:32px}
+.finbanner__lenders img{height:52px;width:auto;filter:drop-shadow(0 4px 14px rgba(0,0,0,.35));transition:transform .22s ease,filter .22s ease}
+.finbanner__lenders img:hover{transform:translateY(-2px) scale(1.08);filter:drop-shadow(0 8px 20px rgba(0,0,0,.5)) brightness(1.12)}
+.finbanner__lenders span{font-family:'Oswald',sans-serif;font-size:.66rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#EEBEC3}
 @media(min-width:601px){
   .finbanner{padding:44px 40px 38px}
-  .finbanner__lenders{flex-wrap:nowrap;gap:30px}
-  .finbanner__lenders img{height:42px}
+  .finbanner__lenders{flex-wrap:nowrap;gap:36px;margin-top:36px}
+  .finbanner__lenders img{height:64px}
 }
 @media(prefers-reduced-motion:reduce){.finbanner{animation:none;box-shadow:0 0 30px 4px rgba(255,32,54,.22),0 14px 44px rgba(0,0,0,.45)}}
 

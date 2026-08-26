@@ -88,7 +88,7 @@
           meters:[["Ride quality",78],["Install difficulty",42],["Driveway friendly",94]],
           note:"Preloaded coil, so the spring compressor stays in the toolbox. Replaces strut spacers, it does not stack on top of them.",
           cta:"Shop the N3 lifted struts",
-          link:"https://www.customwheeloffset.com/store/suspension/50200/rough-country-3-lift-kit-lifted-n3-struts-n3-shocks-14-20-ford-f-150-4wd"
+          link:"https://www.customwheeloffset.com/store/suspension/74696/rough-country-loaded-struts-pair-3-lift-14-23-ford-f-150-4wd"
         },
         {
           name:"M1 Loaded Struts",
@@ -101,7 +101,7 @@
           meters:[["Ride quality",92],["Install difficulty",44],["Driveway friendly",90]],
           note:"Preset at 3in in the box. Check fitment first: no Raptor, Tremor, CCD, 3.0L diesel, or heavy duty payload package.",
           cta:"Shop the M1 loaded struts",
-          link:"https://www.customwheeloffset.com/store/suspension/115118/rough-country-3-inch-lift-kit-m1-struts-14-20-ford-f-150-4wd"
+          link:"https://www.customwheeloffset.com/store/suspension/115552/rough-country-m1-loaded-strut-pair-3-inch-14-25-ford-f-150-4wd"
         }
       ]
     }
