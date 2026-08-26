@@ -929,3 +929,28 @@ card 2's post tags itself "2020 FORD F-150, WHEELS, TIRES, SUSPENSION, PERFORMAN
 All three blog cards are real now. Caught and fixed a stray duplicate `</a>` left over from the
 edit (would have broken every element after it in the DOM) before verifying. No horizontal overflow
 at 390, 820, 1024, 1440px.
+
+---
+
+## 34. Round 34: blog card hover interaction, blogs button left on mobile, hero sub size
+
+**Blog card hover.** `.bcard` already lifted 3px and brightened its image on hover (the same
+pattern `.pcard` uses elsewhere), but nothing else responded. Added: a red glow (`box-shadow`) on
+the card itself, the title switching to `var(--red-hot)`, and a new "Read the post →" line
+(`.bcard__cta`) that's invisible and offset by 6px until hover, then slides up to `opacity:1`. Since
+`:hover` doesn't exist on touch, gated with `@media(hover:none){.bcard__cta{opacity:1;transform:
+translateY(0)}}` so it's simply always visible there instead of permanently hidden.
+
+**"See all blogs" button.** Checked first: on desktop it was already left-aligned (default block
+flow, nothing was centering it). The one place it visually centered was mobile, where `.blogs
+.btn--ghost{width:100%}` makes it a full-width bar and `.btn`'s own `justify-content:center` then
+centers the label inside that bar. Added `justify-content:flex-start` to the same mobile rule so
+the label sits at the button's left edge instead, without changing its full-width sizing.
+
+**Hero sub copy.** Updated `.hero__sub`'s `font-size` from `.97rem` to `18px` on the desktop base
+rule - every other property given (`margin-top:18px`, `max-width:58ch`, `color:#C9C9D1`,
+`text-shadow`) already matched exactly, so this was the only real change. Left the `max-height:760px`
+short-viewport override and the mobile `MOBILE REFINEMENTS` override untouched, since neither was
+part of the ask.
+
+Verified no horizontal overflow at 390, 680, 681, 820, 1024, 1280, 1440, 1920px.

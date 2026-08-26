@@ -77,7 +77,7 @@ h2.display{font-size:clamp(2.1rem,4.4vw,3.6rem)}
 .stamp b{color:var(--red-hot);font-weight:600}
 h1.display{text-shadow:0 3px 28px rgba(0,0,0,.55)}
 h1.display .l2{display:block;color:var(--red-hot)}
-.hero__sub{margin-top:18px;max-width:58ch;font-size:.97rem;color:#C9C9D1;text-shadow:0 1px 14px rgba(0,0,0,.8)}
+.hero__sub{margin-top:18px;max-width:58ch;font-size:18px;color:#C9C9D1;text-shadow:0 1px 14px rgba(0,0,0,.8)}
 .hero__actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
 /* short-viewport fit, independent of device width */
 @media(max-height:760px){
@@ -529,15 +529,21 @@ h1.display .l2{display:block;color:var(--red-hot)}
 .blogs{background:var(--ink);border-top:1px solid var(--line-2)}
 .bgrid{display:grid;grid-template-columns:1fr;gap:22px;margin-top:38px}
 @media(min-width:901px){.bgrid{grid-template-columns:repeat(3,1fr)}}
-.bcard{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--panel-2);text-decoration:none;display:flex;flex-direction:column;transition:border-color .25s,transform .25s}
-.bcard:hover{border-color:rgba(206,17,38,.5);transform:translateY(-3px)}
+.bcard{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--panel-2);text-decoration:none;display:flex;flex-direction:column;transition:border-color .25s,transform .25s,box-shadow .25s}
+.bcard:hover{border-color:rgba(206,17,38,.5);transform:translateY(-3px);box-shadow:0 16px 32px -14px rgba(206,17,38,.4)}
 .bcard__img{aspect-ratio:8/5;background:#000;overflow:hidden}
 .bcard__img img{width:100%;height:100%;object-fit:cover;opacity:.82;transition:opacity .3s,transform .5s}
 .bcard:hover .bcard__img img{opacity:1;transform:scale(1.04)}
 .bcard__body{padding:20px}
 .bcard__cat{font-family:'Oswald',sans-serif;font-size:.61rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--red-hot)}
-.bcard__t{font-family:'Oswald',sans-serif;font-weight:600;font-size:1.05rem;color:var(--white);line-height:1.35;margin:9px 0 11px}
+.bcard__t{font-family:'Oswald',sans-serif;font-weight:600;font-size:1.05rem;color:var(--white);line-height:1.35;margin:9px 0 11px;transition:color .2s}
+.bcard:hover .bcard__t{color:var(--red-hot)}
 .bcard__m{font-size:.78rem;color:var(--dim)}
+.bcard__cta{display:flex;align-items:center;gap:8px;margin-top:14px;font-family:'Oswald',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--red-hot);opacity:0;transform:translateY(6px);transition:opacity .25s,transform .25s}
+.bcard__cta span{transition:transform .25s}
+.bcard:hover .bcard__cta{opacity:1;transform:translateY(0)}
+.bcard:hover .bcard__cta span{transform:translateX(4px)}
+@media(hover:none){.bcard__cta{opacity:1;transform:translateY(0)}}
 
 /* ---------- stats ---------- */
 .stats{background:var(--panel);border-top:1px solid var(--line-2);border-bottom:1px solid var(--line-2)}
@@ -651,8 +657,8 @@ h1.display .l2{display:block;color:var(--red-hot)}
   .bcard:first-child{margin-left:16px}
   .bcard:last-child{margin-right:16px}
 
-  /* "See all blogs" goes full width */
-  .blogs .btn--ghost{width:100%}
+  /* "See all blogs" goes full width, label kept left instead of centered */
+  .blogs .btn--ghost{width:100%;justify-content:flex-start}
 
   /* phone numbers never break mid-number across a line */
   a[href^="tel:"]{white-space:nowrap}
