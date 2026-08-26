@@ -785,3 +785,14 @@ byline pill drifted up onto the same line as the wrapped heading instead of stac
 Fixed by switching both to `width:fit-content` on a normal block box, which always starts a new
 line regardless of content width. Verified at 390, 820, 1001, 1024, 1280, 1440, 1920px: no
 horizontal overflow and the two elements stack correctly at every size.
+
+---
+
+## 27. Round 27: heading on one line
+
+Removed the forced `<br>` in the h2 ("Can you really<br>do it in a weekend?" -> one string). The
+titlebar's `width:fit-content` plus `h2.display`'s existing `clamp(2.1rem,4.4vw,3.6rem)` font-size
+already handled it without further changes - the heading sits on one line down to 1024px wide, and
+only wraps (naturally, at a sensible word boundary, not forced) on narrower phone widths where it
+cannot fit even at the clamp's minimum size. Verified no horizontal overflow at 390, 1024, and
+1440px.
