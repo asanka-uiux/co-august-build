@@ -896,3 +896,36 @@ in the MOBILE REFINEMENTS block). Added it to that same rule rather than writing
 on both `#story` and `#story-split` (they share `.prose`), unchanged at 17px on desktop. Verified
 computed `font-size` at 390px is 14px and 1440px is 17px, and no horizontal overflow at 390, 680,
 681, 820, 1024, 1440px.
+
+---
+
+## 33. Round 33: first real blog card
+
+Blog card 1 is no longer a placeholder. Fetched the hero image and metadata (title, category,
+publish date) from the linked customwheeloffset.com post - same first-party-asset workflow the
+parts cards already use (README section 2), just for a blog post instead of a product page.
+
+| Field | Value |
+|---|---|
+| Title | What Wheels and Tires Fit a 13th Gen Ford F-150? (2015-2020) |
+| Category | Fitment Guides |
+| Link | customwheeloffset.com/blogs/2216/what-wheels-and-tires-fit-a-13th-gen-ford-f-150-2015-2020 |
+| Image | `assets/blog-01.jpg`, from the post's og:image, resized to 1200px wide |
+| Meta line | Custom Offsets Team . August 24, 2026 (post's actual publish date - no author byline was shown on the post itself, so none was invented) |
+
+**Cards 2 and 3, same round.** Given the title + link for each, pulled the rest the same way.
+
+| Card | Title | Category | Meta line |
+|---|---|---|---|
+| 2 | 2020 Ford F-150 Parts Guide (13th Gen 2015-2020) | Parts Guides | Custom Offsets Team . November 5, 2021 |
+| 3 | Common Ford F-150 Wheel & Suspension Issues and How to Solve Them with Mods | Troubleshooting | Custom Offsets Team . March 6, 2025 |
+
+Images: `assets/blog-02.jpg` from card 2's og:image (an S3-hosted asset, not the same CDN as cards 1
+and 3), `assets/blog-03.jpg` from card 3's og:image - both resized to 1200px wide the same way as
+card 1. Categories are my own short label per post (the source pages carry multi-tag lists, e.g.
+card 2's post tags itself "2020 FORD F-150, WHEELS, TIRES, SUSPENSION, PERFORMANCE, ACCESSORIES,
+13TH-GEN" - too many for a card, so picked the one word that best names what the post actually is).
+
+All three blog cards are real now. Caught and fixed a stray duplicate `</a>` left over from the
+edit (would have broken every element after it in the DOM) before verifying. No horizontal overflow
+at 390, 820, 1024, 1440px.
