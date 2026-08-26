@@ -713,3 +713,24 @@ photo well too. Result: the worker is fully visible AND the truck's grille, hood
 are in frame (previously it was one or the other). Verified no horizontal overflow at 1001, 1024,
 1280, 1440, and 1920px wide, and that text stays legible at every width, including where it crosses
 his hoodie at 1024px.
+
+---
+
+## 24. Round 24: action-shot photo, worker back on the left
+
+Another new stakeholder photo (`story_bg.webp`, 1652x929) replaced `assets/story-background.jpg`
+(quality 85 JPEG, original kept at `raw-originals/story_bg.webp`). This one is an action shot -
+the worker kneeling with an impact wrench on the front wheel - and it flips the layout back to
+worker-on-the-left, truck-front-on-the-right, closer to the original round-20 photo's arrangement
+than round 23's.
+
+Right-anchored `background-position` (round 23's setting) showed only a tight grille close-up, no
+worker at all - same failure mode as round 21/22's original photo. Panned back toward the left:
+`background-position:right center, 15% center`. At that crop the worker (kneeling, cap, tool in
+hand) is fully visible and clearly lit by the round-22 gradient, with the truck's fender, wheel,
+and mirror alongside him - grille isn't in frame at this crop, but the tool-in-hand action shot
+arguably fits "The Build Story" better than a static grille shot would.
+
+Verified no horizontal overflow at 1001, 1024, 1280, 1440, 1920px, and text stays legible
+throughout, including at 1024px where the truck is barely present (just the bumper/tire corner)
+but the worker still reads clearly.
